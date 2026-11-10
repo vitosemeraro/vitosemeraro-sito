@@ -55,6 +55,7 @@ section{padding-block:88px}
 .brand{font:800 1.05rem var(--display);display:flex;align-items:center;gap:8px;text-decoration:none}
 .tri{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:11px solid var(--red);display:inline-block}
 .nav .btn{padding:10px 16px;font-size:.9rem}
+@media (max-width:520px){.nav .btn-line{display:none}}
 
 /* hero */
 .hero{padding-block:56px 72px}
@@ -211,7 +212,7 @@ footer a{color:var(--aub-2)}
 <header class="nav pad">
   <div class="wrap">
     <a class="brand" href="#top"><span class="tri" aria-hidden="true"></span>Reflect Mode</a>
-    <a class="btn btn-red" href="#prototype">Try the prototype</a>
+    <div style="display:flex;gap:8px;align-items:center"><a class="btn btn-line" href="https://vitosemeraro.com/">vitosemeraro.com</a><a class="btn btn-red" href="#prototype">Try the prototype</a></div>
   </div>
 </header>
 
@@ -515,7 +516,7 @@ footer a{color:var(--aub-2)}
           <div><b data-count="72">72</b><span>NPS after the migration</span></div>
           <div><b data-count="36" data-pre="+" data-suf="%">+36%</b><span>CES on AI-assisted content</span></div>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px"><a class="btn btn-red" href="https://www.linkedin.com/in/vsemeraro" target="_blank" rel="noopener">Let's talk on LinkedIn</a></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px"><a class="btn btn-red" href="https://www.linkedin.com/in/vsemeraro" target="_blank" rel="noopener">Let's talk on LinkedIn</a><a class="btn btn-line" href="https://vitosemeraro.com/">Visit vitosemeraro.com</a></div>
       </div>
     </div>
   </div>
