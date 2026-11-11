@@ -51,7 +51,7 @@ def page_text(path):
     return title, (desc.group(1) if desc else ''), '\n'.join(lines)
 
 
-pages = ['index.html', 'intelligenza-artificiale-per-aziende/index.html',
+pages = ['index.html', 'chi-sono/index.html', 'intelligenza-artificiale-per-aziende/index.html',
          'workshop-formazione-intelligenza-artificiale/index.html', 'progetti/index.html']
 pages += sorted(p for p in glob.glob('progetti/*/index.html', root_dir=PUB) if p != 'progetti/index.html')
 pages += sorted(glob.glob('diario/*/index.html', root_dir=PUB))
@@ -87,6 +87,7 @@ Sul sito c'è anche "Chiedi a Vito", un assistente AI che risponde solo dai test
 
 ## Pagine
 - [Chi sono, progetti e contatti]({DOMAIN}): profilo, metodo, progetti, talk, certificazioni
+- [Chi sono, in fatti]({DOMAIN}chi-sono/): ruolo, percorso anno per anno, progetti con ruolo e stato, certificazioni, talk e scritti
 - [Intelligenza artificiale per aziende]({DOMAIN}intelligenza-artificiale-per-aziende/): casi d'uso, prototipi con agenti AI, AI Act, adozione misurata
 - [Workshop e formazione sull'AI]({DOMAIN}workshop-formazione-intelligenza-artificiale/): formati per PM, team e manager, alfabetizzazione AI Act art. 4
 - [Tutti i progetti]({DOMAIN}progetti/)
