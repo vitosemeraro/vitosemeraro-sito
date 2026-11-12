@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<title>AI Visibility Snapshot · Vito Semeraro</title>
+<meta name="description" content="An independent snapshot of how AI answer engines present Generali to Italian insurance shoppers, with a 90-day playbook.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --red:#c21b17; --red-ink:#a3140f; --red-soft:#fbe5e3;
+  --ink:#1f1a1c; --ink-2:#55494c; --muted:#857a7c;
+  --bg:#faf7f3; --card:#ffffff; --line:#ebe4dc; --tint:#f3ede6;
+  --gold:#c9a24b; --gold-soft:#f6eedb;
+  --ok:#17845a; --ok-soft:#e0f4ea; --warn:#8a5a00; --warn-soft:#fff1cf;
+  --display:"Bricolage Grotesque","Inter",system-ui,sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --red:#ff5a50; --red-ink:#ff8a80; --red-soft:#3f1d1b; --ink:#f4eeee; --ink-2:#d3c6c8; --muted:#a8999b;
+  --bg:#151112; --card:#201a1b; --line:#372c2e; --tint:#28201f; --gold-soft:#3a2f17; --ok:#62d3a3; --ok-soft:#183529; --warn:#ffcf6e; --warn-soft:#3a2d10; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --red:#ff5a50; --red-ink:#ff8a80; --red-soft:#3f1d1b; --ink:#f4eeee; --ink-2:#d3c6c8; --muted:#a8999b;
+  --bg:#151112; --card:#201a1b; --line:#372c2e; --tint:#28201f; --gold-soft:#3a2f17; --ok:#62d3a3; --ok-soft:#183529; --warn:#ffcf6e; --warn-soft:#3a2d10; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+.pad{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.08;text-wrap:balance;letter-spacing:-.02em}
+h1{font-size:clamp(2.5rem,6.6vw,4.4rem);font-weight:800}
+h2{font-size:clamp(1.9rem,4.4vw,2.8rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.sub{font-size:1.15rem;color:var(--ink-2);max-width:44ch}
+section{padding-block:88px}
+.section-head{display:grid;gap:12px;margin-bottom:40px;max-width:700px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 1rem var(--body);text-decoration:none;border-radius:99px;padding:14px 22px;border:0;cursor:pointer}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-ink)}
+.btn-line{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.brand{font:800 1.05rem var(--display);display:flex;align-items:center;gap:8px;text-decoration:none}
+.dotb{width:12px;height:12px;border-radius:50%;background:var(--red);display:inline-block;box-shadow:6px 0 0 -2px var(--gold)}
+.nav .btn{padding:10px 16px;font-size:.9rem}
+@media (max-width:560px){.nav .btn-line{display:none}}
+
+.hero{padding-block:56px 72px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .sub{margin-top:18px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.badge{font-size:.82rem;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 12px}
+.hero-art{width:100%;max-width:440px;justify-self:center}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-art{max-width:320px;order:-1}}
+
+.tldr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tl{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;display:grid;gap:10px;align-content:start}
+.tl .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font:800 1.1rem var(--display)}
+.tl p{color:var(--ink-2)}
+@media (max-width:820px){.tldr{grid-template-columns:1fr}}
+
+.band{background:#1f1a1c;color:#faf7f3}
+.band .kicker{color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.stat .n{font:800 clamp(2.4rem,5vw,3.4rem) var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
+.stat p{margin-top:8px;color:#cfc3c5;font-size:.95rem}
+.stat small{display:block;margin-top:6px;font-size:.75rem;opacity:.7}
+@media (max-width:820px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.method{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px}
+.box ol{margin:10px 0 0;padding-left:20px;display:grid;gap:6px;color:var(--ink-2)}
+.box ol li span{display:inline-block;font-size:.72rem;font-weight:700;border-radius:99px;padding:1px 8px;margin-left:6px;background:var(--tint);color:var(--muted);vertical-align:1px}
+.box ul{margin:10px 0 0;padding-left:18px;display:grid;gap:6px;color:var(--ink-2)}
+@media (max-width:860px){.method{grid-template-columns:1fr}}
+
+.tblw{overflow-x:auto;border:1px solid var(--line);border-radius:24px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:.92rem}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+td small{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+.st{display:inline-block;font-size:.78rem;font-weight:700;border-radius:99px;padding:4px 10px;white-space:nowrap}
+.s-top{background:var(--ok-soft);color:var(--ok)}
+.s-men{background:var(--warn-soft);color:var(--warn)}
+.s-grp{background:var(--gold-soft);color:#7a5a12}
+.s-abs{background:var(--red-soft);color:var(--red-ink)}
+.s-mix{background:var(--tint);color:var(--ink-2)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .s-grp{color:#e6c77c}}
+:root[data-theme="dark"] .s-grp{color:#e6c77c}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;font-size:.82rem;color:var(--muted)}
+.note{font-size:.8rem;color:var(--muted);margin-top:12px}
+
+.sov{display:grid;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px}
+.sv{display:grid;grid-template-columns:150px minmax(0,1fr) 54px;gap:14px;align-items:center}
+.sv b{font-weight:600}
+.sv .num{font-variant-numeric:tabular-nums;font-weight:700;text-align:right}
+.bar{height:14px;border-radius:99px;background:var(--tint);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--muted);border-radius:99px;width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.sv.me .bar i{background:var(--red)}
+.sv.grp .bar i{background:repeating-linear-gradient(45deg,var(--gold),var(--gold) 6px,color-mix(in srgb,var(--gold) 70%,transparent) 6px,color-mix(in srgb,var(--gold) 70%,transparent) 12px)}
+@media (max-width:560px){.sv{grid-template-columns:96px minmax(0,1fr) 44px;gap:10px}.sv b{font-size:.88rem}}
+
+.finds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.find{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;display:grid;gap:8px;align-content:start}
+.find .so{margin-top:6px;font-weight:600;color:var(--red-ink);font-size:.95rem}
+.find p{color:var(--ink-2)}
+.find .q{font-size:.88rem;border-left:3px solid var(--gold);padding-left:12px;color:var(--muted);font-style:italic}
+@media (max-width:760px){.finds{grid-template-columns:1fr}}
+
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.fl{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;display:grid;gap:8px;align-content:start;position:relative}
+.fl .k{font:800 .8rem var(--body);color:var(--red);letter-spacing:.06em;text-transform:uppercase}
+.fl p{color:var(--ink-2);font-size:.93rem}
+.chat{margin-top:24px;display:grid;gap:10px;max-width:640px}
+.bub{border-radius:20px;padding:12px 16px;font-size:.95rem;max-width:88%}
+.bub.u{justify-self:end;background:var(--red);color:#fff;border-bottom-right-radius:6px}
+.bub.a{background:var(--card);border:1px solid var(--line);border-bottom-left-radius:6px}
+.bub.a small{display:block;color:var(--muted);margin-top:6px;font-size:.78rem}
+@media (max-width:860px){.flow{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.flow{grid-template-columns:1fr}}
+
+.horizon{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.hz{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;display:grid;gap:10px;align-content:start}
+.hz .when{font:700 .8rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.hz ul{margin:0;padding-left:18px;color:var(--ink-2);display:grid;gap:6px}
+.hz .kpi{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px}
+.hz .kpi span{font-size:.78rem;font-weight:600;border-radius:99px;padding:4px 10px;background:var(--red-soft);color:var(--red-ink)}
+@media (max-width:860px){.horizon{grid-template-columns:1fr}}
+
+.mgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.m{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;display:grid;gap:6px;align-content:start}
+.m .tag{justify-self:start;font-size:.72rem;font-weight:700;border-radius:99px;padding:3px 10px}
+.t-v{background:var(--red-soft);color:var(--red-ink)} .t-q{background:var(--warn-soft);color:var(--warn)} .t-b{background:var(--ok-soft);color:var(--ok)}
+.m .now{font:800 1.5rem var(--display);letter-spacing:-.02em}
+.m p{color:var(--ink-2);font-size:.92rem}
+@media (max-width:860px){.mgrid{grid-template-columns:1fr}}
+
+.me-card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px}
+.me-card .av{width:96px;height:96px;border-radius:50%;object-fit:cover;background:var(--gold)}
+.me-nums{display:flex;flex-wrap:wrap;gap:22px;margin-top:14px}
+.me-nums div b{display:block;font:800 1.6rem var(--display);color:var(--red)}
+.me-nums div span{font-size:.85rem;color:var(--muted)}
+@media (max-width:640px){.me-card{grid-template-columns:1fr;padding:24px}}
+
+footer{border-top:1px solid var(--line);padding-block:40px 56px;color:var(--muted);font-size:.82rem}
+footer .wrap{display:grid;gap:12px}
+footer a{color:var(--ink-2)}
+
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.bar i{transition:none}html{scroll-behavior:auto}}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+<header class="nav pad">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="dotb" aria-hidden="true"></span>AI Visibility Snapshot</a>
+    <div style="display:flex;gap:8px;align-items:center"><a class="btn btn-line" href="https://vitosemeraro.com/">vitosemeraro.com</a><a class="btn btn-red" href="#results">See the results</a></div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero pad">
+  <div class="wrap">
+    <div>
+      <p class="kicker rv">Independent GEO snapshot · Italy · November 2026</p>
+      <h1 class="rv d1" style="margin-top:14px">AI trusts Generali.<br><em>It rarely recommends it.</em></h1>
+      <p class="sub rv d2">I asked two AI answer engines the questions Italians ask before buying insurance. Generali comes first when people ask who is reliable. It almost disappears when they ask what to buy.</p>
+      <div class="ctas rv d3">
+        <a class="btn btn-red" href="#results">See the 16 answers</a>
+        <a class="btn btn-line" href="#playbook">The 90-day playbook</a>
+      </div>
+      <div class="badges rv d3">
+        <span class="badge">8 real pre-sales questions</span><span class="badge">Perplexity + Google AI Mode</span><span class="badge">Every answer read in full</span>
+      </div>
+    </div>
+    <svg class="hero-art rv d2" viewBox="0 0 440 440" role="img" aria-label="Illustration: a chat answer listing insurers, with one slot highlighted and empty">
+      <circle cx="220" cy="220" r="190" fill="var(--tint)"/>
+      <rect x="86" y="92" width="268" height="256" rx="28" fill="var(--card)" stroke="var(--line)" stroke-width="2"/>
+      <rect x="110" y="118" width="150" height="14" rx="7" fill="var(--ink)" opacity=".85"/>
+      <rect x="110" y="142" width="210" height="9" rx="4.5" fill="var(--line)"/>
+      <rect x="110" y="160" width="180" height="9" rx="4.5" fill="var(--line)"/>
+      <g>
+        <circle cx="124" cy="204" r="12" fill="var(--ok-soft)"/><rect x="146" y="198" width="120" height="12" rx="6" fill="var(--ink-2)" opacity=".5"/>
+        <circle cx="124" cy="240" r="12" fill="var(--ok-soft)"/><rect x="146" y="234" width="96" height="12" rx="6" fill="var(--ink-2)" opacity=".5"/>
+        <circle cx="124" cy="276" r="12" fill="var(--ok-soft)"/><rect x="146" y="270" width="134" height="12" rx="6" fill="var(--ink-2)" opacity=".5"/>
+        <rect x="108" y="300" width="222" height="34" rx="12" fill="none" stroke="var(--red)" stroke-width="2.5" stroke-dasharray="7 6"/>
+        <text x="219" y="322" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="13" fill="var(--red)">your brand?</text>
+      </g>
+      <circle cx="356" cy="104" r="34" fill="var(--red)"/>
+      <path d="M340 104 l11 11 l20 -22" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="84" cy="352" r="26" fill="var(--gold)"/>
+      <text x="84" y="361" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="24" fill="#1f1a1c">AI</text>
+      <circle cx="378" cy="300" r="12" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="2"/>
+    </svg>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><p class="kicker rv">30 seconds version</p><h2 class="rv d1">Three things I found</h2></div>
+    <div class="tldr">
+      <article class="tl rv">
+        <div class="ic" style="background:var(--ok-soft);color:var(--ok)">1</div>
+        <h3>Trusted</h3>
+        <p>On "who is reliable in Italy?" both engines put Generali first or second: largest group, low complaint rate, solid.</p>
+      </article>
+      <article class="tl rv d1">
+        <div class="ic" style="background:var(--red-soft);color:var(--red-ink)">2</div>
+        <h3>Not chosen</h3>
+        <p>On life events (a new baby, a mortgage, going freelance) and on car prices, the answers go to Allianz Direct, MetLife, Prima, UniSalute and BeProf.</p>
+      </article>
+      <article class="tl rv d2">
+        <div class="ic" style="background:var(--gold-soft);color:#7a5a12">3</div>
+        <h3>Split</h3>
+        <p>When the group does appear, it is often as Genertel, with no link to Generali. The group is there, but the brand doesn't get the credit.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band pad">
+  <div class="wrap">
+    <div class="section-head"><p class="kicker rv">The snapshot in numbers</p><h2 class="rv d1">14 neutral answers. Who shows up?</h2></div>
+    <div class="stats">
+      <div class="stat rv"><div class="n" data-count="8" data-suf="/14">8/14</div><p>answers mention Generali at all</p><small>Allianz: 11/14</small></div>
+      <div class="stat rv d1"><div class="n" data-count="5" data-suf="/14">5/14</div><p>present it as a real option, not as a fallback or a caveat</p><small>The rest are "ask an agent too" or "costlier choice"</small></div>
+      <div class="stat rv d2"><div class="n" data-count="0" data-suf="/2">0/2</div><p>mentions of Generali on "cheapest car insurance in Italy"</p><small>Allianz Direct leads on both engines</small></div>
+      <div class="stat rv d3"><div class="n">1/5</div><p>Trustpilot score that Google AI Mode cites in the "is Generali good?" answer</p><small>647 reviews, quoted as a source</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker rv">Method</p>
+      <h2 class="rv d1">Small sample, real questions, honest limits</h2>
+      <p class="sub rv d2">This is a snapshot to start a conversation, not a benchmark. A real programme would track hundreds of questions, every week, in every market.</p>
+    </div>
+    <div class="method">
+      <div class="box rv">
+        <h3>The 8 questions (in Italian, as people ask them)</h3>
+        <ol>
+          <li>Best life insurance for a family with young children? <span>life event</span></li>
+          <li>Which home insurance is worth it? Recommend companies</li>
+          <li>Which insurers are the most reliable in Italy?</li>
+          <li>Just bought a house with a mortgage: what cover, which company? <span>life event</span></li>
+          <li>Best supplementary health cover for a freelancer? <span>life event</span></li>
+          <li>Pension fund or PIP: which company? <span>life event</span></li>
+          <li>Cheapest car insurance in Italy?</li>
+          <li>Is Generali a good insurer? Pros and cons <span>branded</span></li>
+        </ol>
+      </div>
+      <div class="box rv d1">
+        <h3>How I ran it</h3>
+        <ul>
+          <li>Engines: Perplexity and Google AI Mode, Italian locale, web search on. 16 answers, each read in full with its sources.</li>
+          <li>One run, on 12 November 2026. AI answers change from run to run, so treat each cell as one observation.</li>
+          <li>ChatGPT was unavailable that night, so it's out. Gemini, Copilot and AI Overviews are next.</li>
+          <li>Scoring per answer: <b>top</b> (first or recommended), <b>mentioned</b>, <b>group brand only</b> (Genertel, Cattolica), <b>absent</b>.</li>
+          <li>No Generali data used. Everything here is public and reproducible.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="results" class="pad" style="background:var(--tint)">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker rv">Results</p>
+      <h2 class="rv d1">Question by question</h2>
+      <p class="sub rv d2">Where Generali stands in each answer, and which brand the answer actually pushes.</p>
+    </div>
+    <div class="tblw rv">
+      <table>
+        <thead><tr><th>Question</th><th>Perplexity</th><th>Google AI Mode</th><th>Who gets the recommendation</th></tr></thead>
+        <tbody>
+          <tr><td>Life cover, young family<small>life event</small></td><td><span class="st s-grp">Genertel only</span></td><td><span class="st s-grp">Genertel only</span></td><td>MetLife, Genertel, viteSicure</td></tr>
+          <tr><td>Home insurance</td><td><span class="st s-men">Fallback</span></td><td><span class="st s-men">Mentioned, #2</span></td><td>Allianz Direct, Zurich Connect, Assimoco</td></tr>
+          <tr><td>Most reliable insurers</td><td><span class="st s-men">Mentioned, #2</span></td><td><span class="st s-top">Top</span></td><td>UnipolSai (Perplexity), Generali (Google)</td></tr>
+          <tr><td>New home with a mortgage<small>life event</small></td><td><span class="st s-men">In a list of 6</span></td><td><span class="st s-men">In a list of 5</span></td><td>Groupama (its pages are the cited source), Prima, Allianz Direct</td></tr>
+          <tr><td>Health cover, freelancer<small>life event</small></td><td><span class="st s-abs">Absent</span></td><td><span class="st s-men">Bundled with AXA</span></td><td>BeProf, UniSalute, AXA, Allianz</td></tr>
+          <tr><td>Pension fund or PIP<small>life event</small></td><td><span class="st s-abs">Absent</span></td><td><span class="st s-men">As the costlier option</span></td><td>Allianz Insieme, Amundi, Arca</td></tr>
+          <tr><td>Cheapest car insurance</td><td><span class="st s-grp">Genertel, under-26 only</span></td><td><span class="st s-abs">Absent</span></td><td>Allianz Direct, Prima, ConTe.it, Verti</td></tr>
+          <tr><td>"Is Generali good?"<small>branded</small></td><td><span class="st s-mix">Solid, but pricey, slow claims</span></td><td><span class="st s-mix">Solid, but pricey, Trustpilot 1/5</span></td><td>Advice on both: compare at least 3 quotes</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend"><span class="st s-top">Top</span><span class="st s-men">Mentioned</span><span class="st s-grp">Group brand only</span><span class="st s-abs">Absent</span></div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker rv">Share of presence</p>
+      <h2 class="rv d1">Allianz is in more answers than any other insurer</h2>
+      <p class="sub rv d2">How many of the 14 neutral answers name each group. Counted per group: Allianz includes Allianz Direct, Unipol includes UniSalute and Linear, AXA includes Quixa.</p>
+    </div>
+    <div class="sov rv">
+      <div class="sv"><b>Allianz</b><div class="bar"><i data-w="78.6%"></i></div><span class="num">11</span></div>
+      <div class="sv grp"><b>Generali group</b><div class="bar"><i data-w="78.6%"></i></div><span class="num">11</span></div>
+      <div class="sv"><b>Unipol</b><div class="bar"><i data-w="64.3%"></i></div><span class="num">9</span></div>
+      <div class="sv me"><b>Generali brand</b><div class="bar"><i data-w="57.1%"></i></div><span class="num">8</span></div>
+      <div class="sv"><b>AXA</b><div class="bar"><i data-w="57.1%"></i></div><span class="num">8</span></div>
+      <div class="sv"><b>Prima</b><div class="bar"><i data-w="35.7%"></i></div><span class="num">5</span></div>
+      <div class="sv"><b>Reale Mutua</b><div class="bar"><i data-w="35.7%"></i></div><span class="num">5</span></div>
+    </div>
+    <p class="note">Generali group = the Generali brand plus Genertel and Cattolica. Out of 14 answers (7 questions × 2 engines). The branded question is left out.</p>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><p class="kicker rv">What it means</p><h2 class="rv d1">Six findings, six moves</h2></div>
+    <div class="finds">
+      <article class="find rv"><h3>The Lifetime Partner gap</h3><p>Generali's strategy is built on life events. Life events are exactly where the answers send people elsewhere: MetLife for a young family, BeProf for a freelancer, low-cost pension funds instead of PIPs.</p><p class="so">So: build answer-first content for each life event, with the comparison tables the engines like to quote.</p></article>
+      <article class="find rv d1"><h3>The group doesn't add up</h3><p>Genertel appears in 5 neutral answers and none of them says it belongs to Generali. Only the branded answer makes the link. The group's reach is split across names.</p><p class="so">So: make the brand family machine-readable (parent and child organisation markup, Wikidata, consistent "part of Generali" copy).</p></article>
+      <article class="find rv"><h3>Other people's pages tell the story</h3><p>The most cited sources were comparison sites (Segugio, Facile.it), Trustpilot and competitors' own guides. On the mortgage question Groupama's guide is the source, even though Generali is listed first.</p><p class="so">So: publish the guide the engine wants to cite, and earn a place in the comparison sites and surveys it trusts.</p></article>
+      <article class="find rv d1"><h3>Reputation is decided by reviews</h3><p>The branded answer is fair on solidity, but it builds its "cons" on Trustpilot (1/5 on 647 reviews), slow claims and price.</p><p class="q">"Gestione sinistri altalenante" (Google AI Mode)</p><p class="so">So: a review and claims-experience programme, measured on how the answers change.</p></article>
+      <article class="find rv"><h3>The engines disagree on facts</h3><p>Perplexity says Generali's digital tools are weaker than the online insurers'. Google AI Mode calls them "advanced". Both can't be right, and nobody is correcting either.</p><p class="so">So: track accuracy as a KPI and fix the source pages, not the model.</p></article>
+      <article class="find rv d1"><h3>Price questions are lost by default</h3><p>"Cheapest car insurance" goes to the online insurers with "from €124" prices. Generali isn't mentioned, and Genertel only appears for under-26s.</p><p class="so">So: don't fight on price. Route price intent to Genertel, clearly signed as part of Generali, and value intent to agents.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="background:var(--tint)">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker rv">Agentic pre-sales</p>
+      <h2 class="rv d1">From a life event to the right product or advisor</h2>
+      <p class="sub rv d2">The answer engines already run this conversation, without Generali. The same flow can live on Generali's own channels, with guardrails a regulated insurer needs.</p>
+    </div>
+    <div class="flow">
+      <div class="fl rv"><span class="k">1 · Listen</span><h3>Name the life event</h3><p>"We just had a baby", "I'm opening a VAT number". No product jargon needed.</p></div>
+      <div class="fl rv d1"><span class="k">2 · Understand</span><h3>3 to 5 questions</h3><p>Income, debts, who depends on whom. Clear numbers, no sales pressure.</p></div>
+      <div class="fl rv d2"><span class="k">3 · Explain</span><h3>Grounded answers</h3><p>Every claim cites the product documents (DIP, KID). Any doubt goes to a person.</p></div>
+      <div class="fl rv d3"><span class="k">4 · Route</span><h3>Product, channel or agent</h3><p>Simple needs go to online quotes. Complex ones go to an agent, with the context already filled in.</p></div>
+    </div>
+    <div class="chat">
+      <div class="bub u rv">We just had our second child and we have a mortgage. Do we need life insurance?</div>
+      <div class="bub a rv d1">Many families in your situation choose term life cover for both parents, sized on the remaining mortgage plus a few years of expenses. Two questions to give you a range: how much is left on the mortgage, and do you both have an income?<small>Example of the target tone. Sources shown on each claim, and an advisor one tap away.</small></div>
+    </div>
+    <p class="note">Guardrails: IDD demands-and-needs test before any recommendation, product governance (POG) target market, IVASS rules on distance selling, EU AI Act transparency. I built a similar pattern (mandatory citations, confidence score, human escalation) in a compliance assistant prototype for insurance.</p>
+  </div>
+</section>
+
+<section id="playbook" class="pad">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker rv">Playbook</p>
+      <h2 class="rv d1">What I would do in the first 90 days</h2>
+    </div>
+    <div class="horizon">
+      <article class="hz rv"><p class="when">Days 0-30</p><h3>Measure</h3><ul><li>Prompt panel: ~200 questions per market, by life event and business line, on 5 engines, weekly.</li><li>Baseline for Italy plus 2 priority markets.</li><li>Shortlist of tracking vendors vs a lean in-house setup.</li></ul><div class="kpi"><span>Baseline live</span><span>Vendor decision</span></div></article>
+      <article class="hz rv d1"><p class="when">Days 31-60</p><h3>Fix the sources</h3><ul><li>Life-event hubs (family, home, freelance, retirement) written answer-first.</li><li>Markup that connects the brand family. Wikidata and Knowledge Panel cleanup.</li><li>Accuracy fixes for the claims the engines get wrong.</li></ul><div class="kpi"><span>Accuracy errors ↓</span><span>Owned citations ↑</span></div></article>
+      <article class="hz rv d2"><p class="when">Days 61-90</p><h3>Prove and scale</h3><ul><li>Test vs control: changed pages vs untouched ones, read on the same panel.</li><li>Pre-sales assistant pilot on one life event, with Legal and Compliance from day one.</li><li>Executive report that links AI visibility to quotes and leads.</li></ul><div class="kpi"><span>Presence +10 pts</span><span>Pilot go / no-go</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker rv">Measurement framework</p>
+      <h2 class="rv d1">From "are we in the answer?" to "did it sell?"</h2>
+      <p class="sub rv d2">Three layers, one formula each, the same panel every week. Today's values come from this snapshot.</p>
+    </div>
+    <div class="mgrid">
+      <div class="m rv"><span class="tag t-v">Visibility</span><h3>Presence rate</h3><p class="now">57%</p><p>Share of neutral answers that name the brand. Track it by engine, market and life event.</p></div>
+      <div class="m rv d1"><span class="tag t-v">Visibility</span><h3>Recommendation rate</h3><p class="now">36%</p><p>Share of answers that present the brand as a real option, not as a fallback.</p></div>
+      <div class="m rv d2"><span class="tag t-v">Visibility</span><h3>Share of voice</h3><p class="now">8 vs 11</p><p>Brand mentions against the leading competitor on the same panel.</p></div>
+      <div class="m rv"><span class="tag t-q">Quality</span><h3>Owned citation share</h3><p class="now">2 of 16</p><p>Answers that cite generali.com among their sources. The rest is in third parties' hands.</p></div>
+      <div class="m rv d1"><span class="tag t-q">Quality</span><h3>Accuracy and sentiment</h3><p class="now">1 conflict</p><p>Factual errors and conflicts found per 100 answers, plus the tone of the branded answers.</p></div>
+      <div class="m rv d2"><span class="tag t-b">Business</span><h3>AI-referred demand</h3><p class="now">To set up</p><p>Sessions from AI engines, quote starts, agent leads and their quality, read against the visibility trend.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="me-card rv">
+      <img class="av" src="vito.jpg" alt="Vito Semeraro" width="96" height="96">
+      <div>
+        <p class="kicker">Who made this</p>
+        <h3 style="font-size:1.6rem;margin-top:6px">Vito Semeraro, AI Product Manager at RCS MediaGroup</h3>
+        <p style="color:var(--ink-2);margin-top:8px;max-width:62ch">I own the AI evolutions of the editorial CMS behind Corriere della Sera, Gazzetta dello Sport and RCS Periodici, where getting found is the product, and I judge every feature on outcomes. On the side I build GEO tools: an open-source SEO and GEO editor, and AI-visibility audits like this one for small brands.</p>
+        <div class="me-nums">
+          <div><b data-count="500">500</b><span>journalists migrated to a new CMS</span></div>
+          <div><b data-count="72">72</b><span>NPS after the migration</span></div>
+          <div><b data-count="36" data-pre="+" data-suf="%">+36%</b><span>CES on AI-assisted content</span></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px"><a class="btn btn-red" href="https://www.linkedin.com/in/vsemeraro" target="_blank" rel="noopener">Let's talk on LinkedIn</a><a class="btn btn-line" href="https://vitosemeraro.com/">Visit vitosemeraro.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pad">
+  <div class="wrap">
+    <p><b>Disclaimer.</b> Independent analysis by Vito Semeraro, written for a job application. Not affiliated with, commissioned or endorsed by Assicurazioni Generali or any company named on this page. Brand names are used only to report what public AI engines answered. No company data was used.</p>
+    <p><b>Data.</b> 16 answers collected on 12 November 2026 from Perplexity (free tier) and Google AI Mode (Italian locale), one run per question. AI answers vary between runs and users, so these figures describe one snapshot, not a trend. The example chat in the pre-sales section is illustrative and not product advice.</p>
+    <p>© 2026 Vito Semeraro</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var doc=document.documentElement;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window && !reduce){doc.classList.add('js');}
+  function countUp(el){
+    var to=+el.dataset.count, pre=el.dataset.pre||'', suf=el.dataset.suf||'', t0=null, dur=1200;
+    if(reduce){return;}
+    function f(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/dur),e=1-Math.pow(1-k,3);el.textContent=pre+Math.round(to*e)+suf;if(k<1)requestAnimationFrame(f);}
+    requestAnimationFrame(f);
+  }
+  function bars(root){root.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w;});}
+  if(doc.classList.contains('js')){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');
+      el.querySelectorAll('[data-count]').forEach(countUp);bars(el);io.unobserve(el);
+    });},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  } else { bars(document); }
+})();
+</script>
+</body>
+</html>
