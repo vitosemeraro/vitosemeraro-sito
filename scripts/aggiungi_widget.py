@@ -63,7 +63,8 @@ CSS = '''<!--ask:css--><style>
 @keyframes ask-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.ask-new .ask-m,.ask-old .ask-m{animation:none}}
 .ask-n{margin-top:10px;font:400 12px/1.5 var(--mono);color:var(--ink-2)}
-@media (max-width:1000px){.ask{max-width:420px}}
+@media (min-width:1001px){.hero .portrait{grid-row:1}.hero .ask{grid-column:7/10;grid-row:2;align-self:start}.hero .lede{padding-top:20px}}
+@media (max-width:1000px){.ask{max-width:420px;grid-column:1/10}}
 </style><!--/ask:css-->
 '''
 
@@ -103,9 +104,11 @@ sg.addEventListener('click', e => { const b = e.target.closest('button'); if (b)
 })();</script><!--/ask:js-->
 ''' % (json.dumps(EP), json.dumps({'wait': T['wait'], 'err': T['err']}, ensure_ascii=False))
 
-m = re.search(r'(<figure class="portrait">.*?</div>\n)(\s*</figure>)', h, re.S)
+# il campo sta subito dopo il ritratto, come elemento a sé della griglia dell'hero:
+# così una risposta lunga non allunga il ritratto e non spinge giù il testo a sinistra
+m = re.search(r'<figure class="portrait">.*?</figure>\n', h, re.S)
 assert m, 'ritratto non trovato'
-h = h[:m.end(1)] + HTML + h[m.start(2):]
+h = h[:m.end()] + HTML + h[m.end():]
 h = h.replace('</head>', CSS + '</head>', 1)
 h = h.replace('</body>', JS + '</body>', 1)
 open(path, 'w', encoding='utf-8').write(h)
