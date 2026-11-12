@@ -644,36 +644,42 @@ figcaption .tv,.cap .tv,.st .tv{min-width:0;margin-right:14px}
 .cc-b button:focus-visible{outline:2px solid var(--red,#C42A3C);outline-offset:2px}
 .foot-l button.cc-open{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 </style><!--/cc:css-->
+<link href="/favicon.ico" rel="icon" sizes="32x32"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<style id="lng-css">.bar nav a{white-space:nowrap}.bar nav a.lng{display:inline!important;padding-left:20px;border-left:1px solid var(--rule,#9FB3AD)}@media (max-width:1320px){.bar nav{gap:20px}}@media (max-width:1180px){.bar-r{display:none}}</style>
 <!--ask:css--><style>
 .ask{margin-top:20px;font:400 16px/1.5 var(--serif)}
-.ask .lbl{display:flex;justify-content:space-between;gap:12px;color:var(--ink)}
-.ask .ask-ai{color:var(--ink-2)}
+.ask .lbl{display:block;color:var(--ink)}
 .ask-row{display:flex;margin-top:8px;border:1px solid var(--ink);background:var(--paper)}
-.ask-row input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:400 17px/1.4 var(--serif);padding:12px 12px}
+.ask-row input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:400 17px/1.4 var(--serif);padding:12px}
 .ask-row input::placeholder{color:var(--ink-2);opacity:.75}
 .ask-row input:focus{outline:none}
 .ask-row:focus-within{outline:2px solid var(--red);outline-offset:2px}
 .ask-row button{flex:none;border:0;border-left:1px solid var(--ink);background:var(--ink);color:var(--paper);font:500 14px/1 var(--mono);padding:0 16px;cursor:pointer}
 .ask-row button:disabled{opacity:.6;cursor:wait}
 .ask-sg{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.ask-sg[hidden]{display:none}
+.ask-sg[hidden],.ask-out[hidden]{display:none}
 .ask-sg button{font:400 13px/1.3 var(--mono);color:var(--ink);background:transparent;border:1px solid var(--rule);padding:6px 9px;cursor:pointer;text-align:left}
 .ask-sg button:hover{border-color:var(--ink)}
-.ask-out{margin-top:14px;max-height:360px;overflow:auto;border-top:1px solid var(--rule)}
-.ask-out[hidden]{display:none}
-.ask-m{padding:12px 0;border-bottom:1px solid var(--rule)}
+.ask-out{margin-top:14px}
+.ask-m{padding:12px 0;border-top:1px solid var(--rule)}
 .ask-m .q{font:400 13px/1.5 var(--mono);color:var(--ink-2)}
 .ask-m .a{margin-top:4px;color:var(--ink);white-space:pre-line;overflow-wrap:anywhere}
 .ask-m .a a{text-decoration:underline;text-underline-offset:3px}
 .ask-m .a.wait{color:var(--ink-2)}
 .ask-m .a.err{color:var(--red)}
+/* older answers slide under a fade from the page background to transparent */
+.ask-old{position:relative;max-height:150px;overflow:hidden;pointer-events:none}
+.ask-old:empty{display:none}
+.ask-old::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--paper) 15%,rgba(238,242,240,0))}
+.ask-new .ask-m,.ask-old .ask-m{animation:ask-in .35s ease-out}
+@keyframes ask-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.ask-new .ask-m,.ask-old .ask-m{animation:none}}
 .ask-n{margin-top:10px;font:400 12px/1.5 var(--mono);color:var(--ink-2)}
-@media (max-width:1000px){.ask{max-width:420px}}
+@media (min-width:1001px){.hero .portrait{grid-row:1}.hero .ask{grid-column:7/10;grid-row:2;align-self:start}.hero .lede{padding-top:20px}}
+@media (max-width:1000px){.ask{max-width:420px;grid-column:1/10}}
 </style><!--/ask:css-->
-<link href="/favicon.ico" rel="icon" sizes="32x32"/>
-<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
-<style id="lng-css">.bar nav a{white-space:nowrap}.bar nav a.lng{display:inline!important;padding-left:20px;border-left:1px solid var(--rule,#9FB3AD)}@media (max-width:1320px){.bar nav{gap:20px}}@media (max-width:1180px){.bar-r{display:none}}</style>
 </head>
 <body>
 <header class="bar">
@@ -694,14 +700,14 @@ figcaption .tv,.cap .tv,.st .tv{min-width:0;margin-right:14px}
 <h1><span class="h1-r">AI Product Manager and PM builder</span>I design, build <br/>and bring AI <br/>into business processes.</h1>
 <figure class="portrait">
 <div class="pl"><canvas aria-hidden="true" class="plot" data-src="/assets/img/6535afb5a0.webp"></canvas><img alt="Vito Semeraro, pen portrait from a photo by Giovanni Miele" height="1152" src="/assets/img/6535afb5a0.webp" width="928"/></div>
-<!--ask--><form aria-label="Ask Vito, AI assistant" autocomplete="off" class="ask" id="ask">
-<label class="lbl" for="ask-q">Ask Vito <span class="ask-ai">AI assistant</span></label>
-<div class="ask-row"><input enterkeyhint="send" id="ask-q" maxlength="400" name="q" placeholder="What would you like to know?" type="text"/><button aria-label="Ask" type="submit">Ask <span aria-hidden="true">→</span></button></div>
-<div class="ask-sg" id="ask-sg"><button type="button">What is staged.ai?</button><button type="button">How do you work with AI agents?</button><button type="button">What workshops do you run?</button></div>
-<div aria-live="polite" class="ask-out" hidden="" id="ask-out"></div>
-<p class="ask-n">An AI answers using only the text on this site. It can make mistakes: write to me to confirm.</p>
-</form><!--/ask-->
 </figure>
+      <!--ask--><form class="ask" id="ask" autocomplete="off" aria-label="Ask Vito, his second brain answers">
+        <label class="lbl" for="ask-q">Ask Vito</label>
+        <div class="ask-row"><input id="ask-q" name="q" type="text" maxlength="400" placeholder="What would you like to know?" enterkeyhint="send"><button type="submit">Ask <span aria-hidden="true">→</span></button></div>
+        <div class="ask-sg" id="ask-sg"><button type="button">What is staged.ai?</button><button type="button">How do you work with AI agents?</button><button type="button">Which certifications do you hold?</button></div>
+        <div class="ask-out" id="ask-out" aria-live="polite" hidden><div class="ask-new" id="ask-new"></div><div class="ask-old" id="ask-old" aria-hidden="true"></div></div>
+        <p class="ask-n">Answers come from Vito’s second brain, which can make mistakes. To double-check, write to me.</p>
+      </form><!--/ask-->
 <div class="lede rv">
 <p>I’ve worked in digital for twenty years: I started as a designer, and for more than ten years I’ve led products in media, retail, banking and education. Today I lead digital products at a large publishing group, and I build things myself: prototypes with Claude Design, software with AI agents, automated tests, functional analyses that are generated and then verified.</p>
 <p class="ctas"><a class="go" href="#progetti">See the projects <span aria-hidden="true">→</span></a><a class="go" href="#contatti">Write to me <span aria-hidden="true">→</span></a></p>
@@ -1105,9 +1111,9 @@ if (frozen !== null) els.forEach(e => e.classList.add('in'));
 <script data-cf-beacon='{"token": "551c9cdb4d654f5e8e92b3f9f99096ca"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
 <!--/cc:body-->
 <!--ask:js--><script>(() => {
-const EP = 'https://chiedi-a-vito.cfdist2.workers.dev/chat';
+const EP = "https://chiedi-a-vito.cfdist2.workers.dev/chat", T = {"wait": "Looking through my notes…", "err": "I can’t answer right now. You can write to vsemeraro@gmail.com."};
 const f = document.getElementById('ask'); if (!f) return;
-const q = document.getElementById('ask-q'), out = document.getElementById('ask-out'), sg = document.getElementById('ask-sg'), btn = f.querySelector('.ask-row button');
+const q = document.getElementById('ask-q'), out = document.getElementById('ask-out'), nw = document.getElementById('ask-new'), old = document.getElementById('ask-old'), sg = document.getElementById('ask-sg'), btn = f.querySelector('.ask-row button');
 const hist = [];
 const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt = s => esc(s).replace(/\*\*(.+?)\*\*/g, '$1')
@@ -1116,20 +1122,23 @@ const fmt = s => esc(s).replace(/\*\*(.+?)\*\*/g, '$1')
 async function ask(text) {
   text = text.trim().slice(0, 400); if (!text || btn.disabled) return;
   sg.hidden = true; out.hidden = false; btn.disabled = true; q.value = '';
+  // the previous answer moves below, under the fade; the new one sits right under the input
+  for (const m of [...nw.children].reverse()) old.prepend(m);
+  while (old.children.length > 3) old.lastChild.remove();
   const m = document.createElement('div'); m.className = 'ask-m';
-  m.innerHTML = '<p class="q"></p><p class="a wait">Searching the text on this site…</p>';
-  m.querySelector('.q').textContent = text; out.appendChild(m); out.scrollTop = out.scrollHeight;
+  m.innerHTML = '<p class="q"></p><p class="a wait"></p>';
+  m.querySelector('.q').textContent = text; m.querySelector('.a').textContent = T.wait; nw.appendChild(m);
   const a = m.querySelector('.a');
   hist.push({ role: 'user', content: text });
   try {
     const r = await fetch(EP, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: hist.slice(-12) }) });
     const d = await r.json().catch(() => ({}));
-    if (!r.ok || !d.answer) throw new Error(d.message || 'I can’t answer right now. You can write to vsemeraro@gmail.com.');
+    if (!r.ok || !d.answer) throw new Error(d.message || T.err);
     a.className = 'a'; a.innerHTML = fmt(d.answer); hist.push({ role: 'assistant', content: d.answer });
   } catch (e) {
-    hist.pop(); a.className = 'a err'; a.innerHTML = fmt(e.message && !/fetch|network/i.test(e.message) ? e.message : 'I can’t answer right now. You can write to vsemeraro@gmail.com.');
+    hist.pop(); a.className = 'a err'; a.innerHTML = fmt(e.message && !/fetch|network/i.test(e.message) ? e.message : T.err);
   }
-  btn.disabled = false; out.scrollTop = out.scrollHeight;
+  btn.disabled = false;
   if (window.ccLoaded && window.gtag) gtag('event', 'ask_vito', { turn: Math.ceil(hist.length / 2) });
 }
 f.addEventListener('submit', e => { e.preventDefault(); ask(q.value); });

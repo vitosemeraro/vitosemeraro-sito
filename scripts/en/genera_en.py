@@ -2,7 +2,8 @@
 Also adds hreflang alternates, og:locale:alternate and an IT/EN switch to the Italian pages.
 Run last, after pagina_progetti.py and consenso_cookie.py:  python3 genera_en.py <public>
 Re-runnable. Strings missing from en.json stay Italian and are listed at the end:
-run estrai.py again, translate the new keys in en.json, rerun."""
+run estrai.py again, translate the new keys in en.json, rerun.
+Afterwards run  python3 scripts/aggiungi_widget.py public/en/index.html  (English widget)."""
 import sys, os, re, json
 from bs4 import BeautifulSoup
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
