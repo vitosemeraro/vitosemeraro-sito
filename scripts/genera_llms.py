@@ -74,9 +74,10 @@ def sec(prefix):
 
 EN = f'''## English
 - [Home (English)]({DOMAIN}en/)
-- [AI for companies]({DOMAIN}en/ai-for-companies/)
-- [AI workshops and training]({DOMAIN}en/ai-workshops-training/)
-- [Projects]({DOMAIN}en/projects/)
+- [About]({DOMAIN}en/about/)
+- [The method]({DOMAIN}en/ai-method/)
+- [Learning AI at work]({DOMAIN}en/learning-ai-at-work/)
+- [staged.ai]({DOMAIN}en/projects/staged-ai/)
 
 ''' if os.path.exists(os.path.join(PUB, 'en/index.html')) else ''
 llms = f'''# Vito Semeraro

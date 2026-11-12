@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<!--cc:head-->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied'});
+(function () {
+  var k = 'cc-v1', c = null;
+  try { c = localStorage.getItem(k); } catch (e) {}
+  window.ccLoad = function () {
+    if (window.ccLoaded) return; window.ccLoaded = true;
+    gtag('consent', 'update', {analytics_storage:'granted'});
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2NLG8LPMZB';
+    document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', 'G-2NLG8LPMZB');
+  };
+  if (c === 'y') window.ccLoad();
+})();
+</script>
+<!--/cc:head-->
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>AI Product Manager and PM builder in Milan · Vito Semeraro</title>
+<meta content="Vito Semeraro, AI Product Manager and PM builder in Milan: I design with Claude Design, build with AI agents and bring products into everyday use." name="description"/>
+<link href="https://vitosemeraro.com/en/" rel="canonical"/>
+<link rel="alternate" hreflang="it" href="https://vitosemeraro.com/">
+<link rel="alternate" hreflang="en" href="https://vitosemeraro.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://vitosemeraro.com/">
+<meta content="profile" property="og:type"/>
+<meta content="Vito Semeraro · AI Product Manager" property="og:site_name"/>
+<meta content="AI Product Manager and PM builder in Milan · Vito Semeraro" property="og:title"/>
+<meta content="Vito Semeraro, AI Product Manager and PM builder in Milan: I design with Claude Design, build with AI agents and bring products into everyday use." property="og:description"/>
+<meta content="https://vitosemeraro.com/en/" property="og:url"/>
+<meta content="https://vitosemeraro.com/og/home-v2.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Vito Semeraro, AI Product Manager e PM builder: progetto, costruisco e porto l’AI all’uso quotidiano" property="og:image:alt"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="it_IT" property="og:locale:alternate"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AI Product Manager and PM builder in Milan · Vito Semeraro" name="twitter:title"/>
+<meta content="Vito Semeraro, AI Product Manager and PM builder in Milan: I design with Claude Design, build with AI agents and bring products into everyday use." name="twitter:description"/>
+<meta content="https://vitosemeraro.com/og/home-v2.png" name="twitter:image"/>
+<meta content="Vito Semeraro, AI Product Manager e PM builder: progetto, costruisco e porto l’AI all’uso quotidiano" name="twitter:image:alt"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://vitosemeraro.com/#website","url":"https://vitosemeraro.com/","name":"The AI Product Manager","inLanguage":["it-IT","en"],"publisher":{"@id":"https://vitosemeraro.com/#vito"}},{"@type":"Person","@id":"https://vitosemeraro.com/#vito","name":"Vito Semeraro","url":"https://vitosemeraro.com/","image":"https://vitosemeraro.com/images/vito-semeraro.jpg","jobTitle":"AI Product Manager","description":"AI Product Manager and PM builder in Milan: designs with Claude Design, builds with AI agents and brings products into everyday use, with the PMI-CPMAI method.","address":{"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"},"knowsLanguage":["it","en"],"knowsAbout":["AI product management","PM builder","Agentic development","Claude Code","Claude Design","Model Context Protocol","Test automation","AI adoption","Human-in-the-loop","Responsible AI","Retrieval-augmented generation","Product discovery","Design thinking","Agile","Scrum","PMI-CPMAI","Digital publishing"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"PMI-CPMAI","credentialCategory":"certification","recognizedBy":{"@type":"Organization","name":"Project Management Institute"}},{"@type":"EducationalOccupationalCredential","name":"Professional Scrum Product Owner I","credentialCategory":"certification","recognizedBy":{"@type":"Organization","name":"Scrum.org"}},{"@type":"EducationalOccupationalCredential","name":"Professional Scrum Master I","credentialCategory":"certification","recognizedBy":{"@type":"Organization","name":"Scrum.org"}},{"@type":"EducationalOccupationalCredential","name":"AgilePM Foundation","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"PRINCE2 Foundation","credentialCategory":"certification"}],"sameAs":["https://www.linkedin.com/in/vsemeraro/","https://github.com/vitosemeraro"]},{"@type":"ProfilePage","@id":"https://vitosemeraro.com/en/#profilepage","url":"https://vitosemeraro.com/en/","name":"AI Product Manager and PM builder in Milan · Vito Semeraro","inLanguage":"en","isPartOf":{"@id":"https://vitosemeraro.com/#website"},"mainEntity":{"@id":"https://vitosemeraro.com/#vito"}}]}</script>
+<style>@font-face{font-family:"NR";src:url(/assets/fonts/06702c0158.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"NR";src:url(/assets/fonts/b670064c11.woff2) format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
+@font-face{font-family:"PM";src:url(/assets/fonts/747595bff1.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"PM";src:url(/assets/fonts/ba9292d4ed.woff2) format("woff2");font-weight:500;font-display:swap}
+
+:root{
+  --paper:#EEF2F0;
+  --tint:#E1E8E5;
+  --ink:#123F37;
+  --ink-2:#2F5149;
+  --rule:rgba(18,63,55,.2);
+  --red:#C42A3C;
+  --m:56px; --gap:24px;
+  --serif:"NR",Georgia,serif; --mono:"PM",ui-monospace,monospace;
+  /* five steps, no exceptions: display, statement, item, body, label */
+  --s1:clamp(48px,6.6vw,96px);
+  --s2:clamp(30px,3.6vw,52px);
+  --s3:clamp(20px,1.55vw,23px);
+  --col:calc((min(100vw,1600px) - 2*var(--m) - 8*var(--gap))/9);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:400 18px/1.5 var(--serif);font-optical-sizing:auto;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"kern","liga"}
+a{color:inherit;text-decoration:none}
+img,canvas{display:block}
+ul,ol{list-style:none}
+b{font-weight:inherit}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* nine columns: column 1 is the rail for numbers and plate marks, all content starts at column 2 */
+.g{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));column-gap:var(--gap);padding:0 var(--m);max-width:1600px;margin:0 auto}
+/* rail + n equal tracks, so a row of n items starts exactly at column 2 */
+.r3,.r2,.r5{display:grid;column-gap:var(--gap);padding:0 var(--m);max-width:1600px;margin:0 auto}
+.r3{grid-template-columns:calc((100% - 8*var(--gap))/9) repeat(3,minmax(0,1fr))}
+.r2{grid-template-columns:calc((100% - 8*var(--gap))/9) repeat(2,minmax(0,1fr))}
+.r5{grid-template-columns:calc((100% - 8*var(--gap))/9) repeat(5,minmax(0,1fr))}
+.r3>:first-child,.r2>:first-child,.r5>:first-child{grid-column:2}
+
+.lbl,figcaption,.kv dt,.sh-n,.sh h2,.bar,.foot-row,.ba,.b-c,.q-a,.who-r,.go{font:400 14px/1.5 var(--mono);letter-spacing:0;color:var(--ink)}
+/* red marks plates and nothing else */
+.tv{color:var(--red);display:inline-block;min-width:64px}
+
+/* one link style everywhere: mono, underlined, arrow moves on hover */
+.go{font-weight:500;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;display:inline-block}
+.go span{display:inline-block;transition:transform .2s}
+.go:hover{text-decoration-thickness:2px}
+.go:hover span{transform:translateX(4px)}
+
+.bar{position:sticky;top:0;z-index:5;background:var(--paper)}
+.bar .g{align-items:center;height:56px}
+.mark{grid-column:1/3;font-weight:500}
+.bar-r{grid-column:3/6;color:var(--ink-2)}
+.bar nav{grid-column:6/10;display:flex;justify-content:flex-end;gap:28px}
+.bar nav a:hover{text-decoration:underline;text-underline-offset:5px}
+
+/* every section opens on a single ink rule */
+.sh{position:relative;padding-top:14px;align-items:baseline}
+.sh::before{content:"";position:absolute;left:var(--m);right:var(--m);top:0;border-top:1px solid var(--ink)}
+.sh-n{grid-column:1/2}
+.sh h2{grid-column:2/7}
+.sh-l{grid-column:7/10;justify-self:end}
+
+figure{margin:0}
+.pl{position:relative;display:block;overflow:hidden;background:var(--tint)}
+.pl img,.pl canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gl>img{opacity:0}
+figcaption{margin-top:10px}
+
+/* hero */
+.hero-g{padding-top:72px;padding-bottom:16px;row-gap:0}
+.hero h1{grid-column:2/7;grid-row:1;font:360 var(--s1)/.96 var(--serif);letter-spacing:-.034em;font-variation-settings:"opsz" 72;margin-left:-.05em}
+.portrait{grid-column:7/10;grid-row:1/3;align-self:start;padding-top:.6vw}
+.portrait .pl{aspect-ratio:4/5}
+.lede{grid-column:2/6;grid-row:2;padding-top:56px}
+.lede>p:first-child{font-size:21px;line-height:1.5}
+.ctas{display:flex;gap:32px;margin-top:28px}
+.clients{grid-column:2/10;grid-row:3;margin-top:72px;padding-top:14px;border-top:1px solid var(--rule);display:flex;gap:var(--gap);align-items:baseline}
+.clients .lbl{flex:none;width:calc(var(--col)*2 + var(--gap));color:var(--ink-2)}
+.clients ul{display:flex;flex-wrap:wrap;gap:4px 28px;font-size:18px}
+
+.sec{padding-top:112px}
+
+/* 01 */
+.lead{margin-top:56px;row-gap:0;align-items:baseline}
+.lead-t{grid-column:2/5;font:360 var(--s2)/1 var(--serif);letter-spacing:-.025em;font-variation-settings:"opsz" 72}
+.lead-t a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+.lead .desc{grid-column:5/9;font-size:21px;line-height:1.45}
+.pair-f{grid-column:2/10;margin-top:36px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.pair .pl{aspect-ratio:4/3}
+.ba{position:absolute;top:14px;left:16px;z-index:1;background:var(--paper);padding:1px 8px}
+.kv{grid-column:2/10;display:grid;grid-template-columns:repeat(4,1fr);column-gap:var(--gap);margin-top:40px;border-top:1px solid var(--ink)}
+.kv div{padding-top:12px}
+.kv dt{color:var(--ink-2)}
+.kv dd{margin-top:4px;font-size:18px;line-height:1.4}
+.modes{grid-column:2/10;margin-top:40px}
+.modes .lbl{color:var(--ink-2);padding-bottom:10px}
+.modes dl{display:grid;grid-template-columns:repeat(4,1fr);column-gap:var(--gap);border-top:1px solid var(--ink)}
+.modes dl div{padding:12px 0 0}
+.modes dt{font-size:18px}
+.modes dd{margin-top:4px;font-size:16px;line-height:1.5;color:var(--ink-2)}
+
+.idx{margin-top:96px;align-items:start}
+.proj{display:flex;flex-direction:column}
+.proj .pl{aspect-ratio:4/3}
+.proj .lbl{margin-top:12px}
+.proj h3{font:400 var(--s3)/1.2 var(--serif);letter-spacing:-.01em;margin-top:6px}
+.proj>p:last-child{margin-top:8px;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.proj:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+
+/* 02: statement, plate, then the five phases as one horizontal sequence */
+.method-g{margin-top:48px;row-gap:0;align-items:end}
+.say{grid-column:2/7;font:360 var(--s2)/1.06 var(--serif);letter-spacing:-.025em;font-variation-settings:"opsz" 72}
+.stamp-pl{grid-column:7/10}
+.stamp-pl .pl{aspect-ratio:4/3}
+.seq{margin-top:72px}
+.seq li{display:flex;flex-direction:column;border-top:1px solid var(--ink);padding-top:10px}
+.q-n{font:340 var(--s1)/.9 var(--serif);letter-spacing:-.04em;font-variation-settings:"opsz" 72;margin-left:-.04em}
+.seq b{font:400 var(--s3)/1.2 var(--serif);letter-spacing:-.01em;margin-top:20px}
+.q-a{margin-top:4px;color:var(--ink-2)}
+.q-g{margin-top:24px;padding-top:10px;border-top:1px solid var(--rule);font-size:17px;line-height:1.45}
+.seq-k{margin-top:16px}
+.seq-k .lbl{grid-column:2/10;color:var(--ink-2)}
+
+/* 03 */
+.pb{margin-top:48px;align-items:start}
+.intro{font-size:21px;line-height:1.45}
+.pb .intro{grid-column:2/5}
+.books{grid-column:5/10;border-top:1px solid var(--ink)}
+.books li{border-bottom:1px solid var(--rule)}
+.books a{display:grid;grid-template-columns:110px 1fr;column-gap:var(--gap);padding:16px 0 20px}
+.b-c{grid-row:1/3;padding-top:.3em;color:var(--ink-2)}
+.b-t{font:400 var(--s3)/1.25 var(--serif);letter-spacing:-.01em}
+.b-d{margin-top:6px;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.books a:hover .b-t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+
+/* 04: two interviews, one template */
+.intro-row{margin-top:48px}
+.intro-row .intro{grid-column:2/6}
+.talks{margin-top:56px;align-items:start}
+.talk{border-top:1px solid var(--ink);padding-top:12px}
+.talk>.lbl:first-child{color:var(--ink-2)}
+.who-n{font:400 var(--s3)/1.2 var(--serif);letter-spacing:-.01em;margin-top:20px}
+.who-r{color:var(--ink-2)}
+.talk .q{display:block;margin-top:24px;font:italic 360 var(--s2)/1.08 var(--serif);letter-spacing:-.02em;font-variation-settings:"opsz" 72;min-height:3.24em}
+.talk .q:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:8px}
+.ik{margin-top:28px;padding-bottom:8px;color:var(--ink-2)}
+.talk ul{border-top:1px solid var(--rule);font-size:17px;line-height:1.45}
+.talk li{padding:9px 0;border-bottom:1px solid var(--rule)}
+
+/* 05 */
+.contact{padding-bottom:104px}
+.contact-g{margin-top:48px;align-items:start;row-gap:0}
+.c-main{grid-column:2/7}
+.big{font:340 var(--s1)/.9 var(--serif);letter-spacing:-.04em;font-variation-settings:"opsz" 72;margin-left:-.05em}
+.mail{display:inline-block;margin-top:28px;font:360 var(--s2)/1.1 var(--serif);letter-spacing:-.02em;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:10px}
+.mail:hover{text-decoration-thickness:4px}
+.news{margin-top:48px;max-width:30em}
+.news label{display:block;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.news label b{display:block;font-size:18px;color:var(--ink);margin-bottom:4px}
+.news .field{display:flex;margin-top:14px;border-bottom:1px solid var(--ink)}
+.news input{flex:1;min-width:0;border:0;background:none;font:400 17px/1 var(--serif);color:var(--ink);padding:10px 0}
+.news input::placeholder{color:var(--ink-2)}
+.news input:focus{outline:none}
+.news button{border:0;background:none;font:500 14px/1 var(--mono);color:var(--ink);cursor:pointer;padding:0 0 0 12px}
+.news:focus-within .field{border-bottom-width:2px}
+.colo{grid-column:7/10;border-top:1px solid var(--ink)}
+.fc{display:flex;flex-direction:column;padding:14px 0 22px;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.5;color:var(--ink-2)}
+.fc b{font-size:18px;color:var(--ink);margin-bottom:4px}
+.fc .go{margin-top:14px;align-self:flex-start;color:var(--ink)}
+
+.foot{border-top:1px solid var(--ink)}
+.foot-row{align-items:center;height:60px}
+.foot-row>span:first-child{grid-column:1/3}
+.f-m{grid-column:3/6;color:var(--ink-2)}
+.foot-l{grid-column:6/10;justify-self:end;display:flex;gap:28px}
+.foot-l a:hover{text-decoration:underline;text-underline-offset:5px}
+
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1000px){
+  :root{--m:32px;--gap:18px}
+  .bar-r{display:none}
+  .bar nav{grid-column:3/10}
+  .bar nav a:not([href="#contatti"]):not([href="#progetti"]){display:none}
+  .hero h1,.lede,.portrait,.clients,.lead-t,.lead .desc,.pair-f,.kv,.modes,.say,.stamp-pl,.pb .intro,.books,.intro-row .intro,.c-main,.colo,.seq-k .lbl{grid-column:1/10;grid-row:auto}
+  .portrait{margin-top:40px;max-width:420px}
+  .clients{flex-direction:column;gap:8px;margin-top:48px}
+  .lead .desc{margin-top:12px}
+  .sh h2{grid-column:2/10}
+  .sh-l{grid-column:2/10;justify-self:start;margin-top:8px}
+  .kv,.modes dl{grid-template-columns:1fr 1fr;row-gap:16px}
+  .r3,.r2,.r5{grid-template-columns:1fr;row-gap:48px}
+  .r3>:first-child,.r2>:first-child,.r5>:first-child{grid-column:1}
+  .seq{row-gap:28px}
+  .q-n{font-size:var(--s2)}
+  .stamp-pl{margin-top:40px;max-width:420px}
+  .books{margin-top:28px}
+  .talk .q{min-height:0}
+  .colo{margin-top:56px}
+  .foot-row>span:first-child{grid-column:1/5}
+  .f-m{display:none}
+  .foot-l{grid-column:5/10}
+}
+@media (max-width:560px){
+  :root{--m:20px}
+  body{font-size:17px}
+  .hero-g{padding-top:48px}
+  .pair{grid-template-columns:1fr}
+  .kv,.modes dl{grid-template-columns:1fr}
+  .books a{grid-template-columns:1fr}
+  .b-c{grid-row:auto}
+  .foot-row{height:auto;padding-top:20px;padding-bottom:20px;row-gap:10px}
+  .foot-row>span,.foot-l{grid-column:1/10;justify-self:start}
+}
+/* G6 tune */
+.lead-t,.lead .desc{align-self:end}
+.lead .desc{padding-bottom:4px}
+.method-g{align-items:start}
+.say{padding-top:4px}
+@media (min-width:1001px){.proj .lbl{min-height:42px}}
+
+/* G7: plates print on the page ground, framed by a hairline; red is the plate apparatus (number + corner marks) */
+.pl{background:var(--paper);box-shadow:inset 0 0 0 1px var(--rule)}
+.pl img{mix-blend-mode:multiply}
+.pl::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  --k:14px;--c:var(--red);
+  background:
+    linear-gradient(var(--c),var(--c)) 0 0/var(--k) 1px no-repeat,linear-gradient(var(--c),var(--c)) 0 0/1px var(--k) no-repeat,
+    linear-gradient(var(--c),var(--c)) 100% 0/var(--k) 1px no-repeat,linear-gradient(var(--c),var(--c)) 100% 0/1px var(--k) no-repeat,
+    linear-gradient(var(--c),var(--c)) 0 100%/var(--k) 1px no-repeat,linear-gradient(var(--c),var(--c)) 0 100%/1px var(--k) no-repeat,
+    linear-gradient(var(--c),var(--c)) 100% 100%/var(--k) 1px no-repeat,linear-gradient(var(--c),var(--c)) 100% 100%/1px var(--k) no-repeat}
+.pl>.tv{position:absolute;top:12px;left:16px;z-index:2;font:400 14px/1.5 var(--mono);min-width:0}
+figcaption{color:var(--ink-2)}
+
+/* one serif scale: s1 display, s2 statement, s3 lede and item, 17 body; one mono size */
+body{font-size:17px}
+.lede>p:first-child,.intro,.lead .desc{font-size:var(--s3);line-height:1.45}
+.proj>p:last-child,.modes dd,.b-d,.fc,.news label,.kv dd,.talk ul,.q-g{font-size:17px}
+.modes dt,.fc b,.news label b{font-size:17px;font-weight:500}
+
+.go span{display:inline;margin-left:.2em;transition:margin .2s}
+.go:hover span{margin-left:.5em;transform:none}
+.bar-r{grid-column:2/6}
+
+/* the rail carries the labels */
+.clients{grid-column:1/10;display:grid;grid-template-columns:var(--col) 1fr;column-gap:var(--gap);border-top:1px solid var(--rule)}
+.clients .lbl{width:auto}
+.clients ul{flex-wrap:nowrap;justify-content:space-between;gap:0 24px;font-size:17px}
+
+/* 01: the before/after is the one full-bleed moment */
+.spread{grid-column:1/10;margin-top:40px}
+.spread .pl{height:min(76vh,700px);cursor:ew-resize}
+.spread .pl>.tv{left:16px}
+.ba{background:none;padding:0;top:12px;opacity:1}
+.ba-a{left:calc(var(--col) + var(--gap))}
+.ba-b{left:auto;right:16px}
+.spread figcaption{margin-left:calc(var(--col) + var(--gap))}
+.proj .st{margin-top:4px;color:var(--ink-2);min-height:0}
+.proj h3{margin-top:14px}
+@media (min-width:1001px){.proj .lbl{min-height:0}}
+
+/* 02: one line, five stations */
+.seq{margin-top:64px}
+.seq li{position:relative;border-top:1px solid var(--ink);padding-top:18px}
+.seq li::before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--ink)}
+.seq li:last-child{border-image:linear-gradient(90deg,var(--ink) 0 100%) 1}
+.q-n{font:400 14px/1.5 var(--mono);margin:0;letter-spacing:0;color:var(--ink-2)}
+.seq b{margin-top:6px}
+.q-g{margin-top:20px;border-top:0;padding-top:0}
+.q-g i{display:block;font:normal 400 14px/1.5 var(--mono);color:var(--red);margin-bottom:2px}
+
+/* 03 */
+.pb{margin-top:0}
+.pb .intro-row{margin-top:48px}
+.books{margin-top:40px;border:0;grid-template-columns:none;display:block}
+.books li{border:0}
+.books a{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));column-gap:var(--gap);padding:0}
+.books a>*{padding:16px 0 20px;border-top:1px solid var(--rule)}
+.books li:first-child a>*{border-top-color:var(--ink)}
+.b-c{grid-column:1/2;grid-row:auto;padding-top:20px}
+.b-t{grid-column:2/6}
+.b-d{grid-column:6/10;margin-top:0;padding-top:20px}
+.books li:last-child a>*{border-bottom:1px solid var(--rule)}
+
+/* 04 */
+.talk .q{min-height:3.3em}
+.talk ul{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--gap);border-top:1px solid var(--ink);counter-reset:i}
+.talk li{counter-increment:i;border:0;padding:10px 0 0}
+.talk li::before{content:counter(i);display:block;font:400 14px/1.5 var(--mono);color:var(--ink-2)}
+.ik{padding-bottom:6px}
+
+/* 05: one ask, said once and large */
+.contact{padding-bottom:120px}
+.c-main{grid-column:2/7}
+.big{font-size:calc(var(--s1)*1.35)}
+.mail{margin-top:32px}
+
+.strip{align-items:end;padding-top:40px;padding-bottom:40px}
+.strip .news{grid-column:2/10;margin:0;max-width:none;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:var(--gap);align-items:end}
+.strip label{grid-column:1/5}
+.strip label b{display:inline;margin:0}
+.strip label span{display:block}
+.strip .field{grid-column:5/9;margin:0}
+.foot-row{border-top:1px solid var(--rule)}
+.f-m{grid-column:3/7}
+
+@media (max-width:1000px){
+  .clients{grid-template-columns:1fr}
+  .clients ul{flex-wrap:wrap;justify-content:flex-start}
+  .spread .pl{height:auto;aspect-ratio:4/3}
+  .ba-a{left:16px;top:40px}
+  .spread figcaption{margin-left:0}
+  .books a>*{grid-column:1/10!important;border-top:0;padding:4px 0}
+  .books a{border-top:1px solid var(--rule);padding:12px 0 16px}
+  .strip .news{grid-column:1/10;grid-template-columns:1fr;row-gap:12px}
+  .strip label,.strip .field{grid-column:1}
+  .big{font-size:var(--s1)}
+}
+@media (max-width:560px){.talk ul{grid-template-columns:1fr}}
+.mark{grid-column:1/2;white-space:nowrap}
+.foot-row>span:first-child{grid-column:1/2;white-space:nowrap}
+.f-m{grid-column:2/7}
+.foot-l{grid-column:7/10}
+.spread .pl img{object-fit:contain}
+.proj .pl img,.stamp-pl .pl img{transform:scale(.84)}
+.spread .pl{height:clamp(380px,46vw,680px)}
+
+/* G8: real outputs carry the case; red is the plate number and nothing else */
+.pl::after{--c:var(--ink)}
+.pl>.tv{display:none}
+figcaption .tv,.cap .tv,.st .tv{min-width:0;margin-right:14px}
+.modes{grid-column:1/10;margin-top:40px;display:grid;grid-template-columns:var(--col) 1fr;column-gap:var(--gap)}
+.modes .lbl{padding:12px 0 0;border-top:1px solid var(--ink)}
+.modes ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gap);border-top:1px solid var(--ink);padding-top:16px}
+.modes li{display:flex;flex-direction:column}
+.modes .pl{aspect-ratio:4/5}
+.modes .cap{margin-top:10px}
+.modes li b{margin-top:2px;font-size:var(--s3);line-height:1.2;letter-spacing:-.01em}
+.modes li>span{margin-top:6px;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.kv{margin-top:48px}
+.proj .st{margin-top:4px}
+
+/* 02: a matrix, row labels in the rail */
+.seq{display:grid;grid-template-columns:var(--col) repeat(5,minmax(0,1fr));grid-template-rows:auto auto auto;grid-auto-flow:column;column-gap:var(--gap);padding:0 var(--m);max-width:1600px;margin:64px auto 0}
+.seq li,.seq li.k{display:contents}
+.seq li::before{content:none}
+.seq b,.q-a,.q-g,.k span{border-top:1px solid var(--rule);padding:12px 0 16px;margin:0}
+.seq b,.k1{border-top-color:var(--ink)}
+.k span{font:400 14px/1.5 var(--mono);color:var(--ink-2)}
+.k1{padding-top:16px!important}
+.seq b{font:400 var(--s3)/1.2 var(--serif);padding-top:12px}
+.q-n{display:block;font:400 14px/1.5 var(--mono);color:var(--ink-2);margin-bottom:4px}
+.q-a{color:var(--ink)}
+.q-g{font-size:17px;line-height:1.45;border-bottom:1px solid var(--rule)}
+.k3{border-bottom:1px solid var(--rule)}
+
+/* 04 */
+.talk ul{display:block}
+.talk li{display:grid;grid-template-columns:28px 1fr;padding:9px 0;border-bottom:1px solid var(--rule)}
+.talk li::before{display:inline}
+
+.clients ul{justify-content:flex-start;gap:0 40px}
+.clients{margin-top:56px}
+.clients .lbl{white-space:nowrap}
+
+@media (max-width:1000px){
+  .modes{grid-template-columns:1fr}
+  .modes ol{grid-template-columns:1fr 1fr;row-gap:32px}
+  .seq{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
+  .seq li.k{display:none}
+  .seq li{display:flex;flex-direction:column;margin-bottom:12px}
+  .clients .lbl{white-space:normal}
+}
+.clients .lbl{white-space:normal}
+.modes .cap{font:400 14px/1.5 var(--mono)}
+@media (max-width:1000px){
+  .c-main,.colo{grid-column:1/10}
+  .seq b,.q-a,.q-g{padding:4px 0;border:0}
+  .seq li{border-top:1px solid var(--ink);padding-top:10px;margin-bottom:20px}
+  .seq{margin-top:48px}
+}
+
+/* G9 */
+.proj .st{margin-top:12px}
+.proj h3{margin-top:2px}
+.band{background:var(--tint);padding:24px 0 104px;margin-top:112px}
+.band.sec{padding-top:24px}
+.band .pl{background:var(--tint)}
+.band .sh::before{border-color:var(--ink)}
+.say{grid-column:2/8}
+.stamp-pl{grid-column:8/10}
+.books a{grid-template-columns:repeat(9,minmax(0,1fr))}
+.b-d{grid-column:6/9}
+.b-go{grid-column:9/10;justify-self:end;padding-top:22px!important;opacity:.0;transition:opacity .15s}
+.books a:hover .b-go{opacity:1}
+@media (hover:none){.b-go{opacity:1}}
+.b-go{opacity:1}
+.c-main .news{margin-top:56px;max-width:30em}
+.c-main .news label span{display:block}
+.contact{padding-bottom:96px}
+.bar nav a.on{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.clients{margin-top:48px}
+.sec{padding-top:96px}
+.portrait .pl{aspect-ratio:928/1152}
+@media (max-width:1000px){
+  .say,.stamp-pl{grid-column:1/10}
+  .b-go{grid-column:1/10!important;justify-self:start}
+}
+.band{padding-bottom:72px}
+.band+.sec{padding-top:72px}
+
+/* G10: one hand, fewer loud moments, no scaffolding */
+.pl{box-shadow:none}
+.pl::after{content:none}
+.portrait .pl::after{content:""}
+.sh-n{visibility:hidden}
+.say{font-size:clamp(28px,2.6vw,38px);line-height:1.15;letter-spacing:-.015em}
+.talk .q{font-size:clamp(26px,2.3vw,34px);line-height:1.15;min-height:3.45em}
+.big{font-size:var(--s1)}
+.mail{font-size:clamp(26px,2.4vw,36px);text-underline-offset:8px;text-decoration-thickness:1px}
+
+.clients{display:block;margin-top:56px;padding-top:12px;grid-column:2/10}
+.clients .lbl{margin-bottom:8px}
+.clients ul{justify-content:space-between;gap:0;font:400 14px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.hero+.sec{padding-top:80px}
+
+.modes{display:block;grid-column:2/10}
+.modes .lbl{border:0;padding:0 0 10px;color:var(--ink-2)}
+
+.b-d{grid-column:6/10}
+.b-go{display:inline;padding:0!important;border:0!important;margin-left:.4em;white-space:nowrap}
+.books a{transition:background .15s}
+.books a:hover{background:var(--tint)}
+.books a:hover .b-t{text-decoration:none}
+@media (max-width:1000px){.clients ul{flex-wrap:wrap;gap:4px 20px;justify-content:flex-start}.clients{grid-column:1/10}}
+
+/* H1 con il ruolo, come chiede la SEO del kit */
+.h1-r{display:block;font:400 14px/1.5 var(--mono);letter-spacing:0;margin-bottom:22px;color:var(--ink)}
+/* Cosa faccio: quattro tavole di testo, poi i numeri */
+.r4{display:grid;column-gap:var(--gap);padding:0 var(--m);max-width:1600px;margin:56px auto 0;grid-template-columns:calc((100% - 8*var(--gap))/9) repeat(4,minmax(0,1fr))}
+.r4>:first-child{grid-column:2}
+.cf-i{border-top:1px solid var(--rule);padding-top:14px}
+.cf-i .lbl{color:var(--red)}
+.cf-i h3{font:400 var(--s3)/1.15 var(--serif);letter-spacing:-.01em;margin-top:10px}
+.cf-i p:last-child{margin-top:10px;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.nums{margin-top:72px}
+.nums div{grid-column:span 2;border-top:1px solid var(--ink);padding-top:12px;display:flex;flex-direction:column-reverse}
+.nums div:first-child{grid-column:2/4}
+.nums dd{font:340 clamp(64px,7vw,112px)/.9 var(--serif);letter-spacing:-.04em}
+.nums dt{margin-top:10px;font:400 14px/1.5 var(--mono);color:var(--ink-2);max-width:18ch}
+.hl{grid-column:2/10;display:grid;grid-template-columns:repeat(3,1fr);column-gap:var(--gap);margin-top:40px;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.hl li{border-top:1px solid var(--rule);padding-top:12px}
+.hl b{display:block;font-weight:400;font-family:var(--serif);font-size:22px;color:var(--ink);margin-bottom:4px}
+.hl-l{grid-column:2/10;margin-top:24px}
+@media (max-width:1000px){
+  .r4{grid-template-columns:1fr 1fr;row-gap:32px}
+  .r4>:first-child{grid-column:auto}
+  .nums div,.nums div:first-child{grid-column:span 4}
+  .nums{row-gap:28px}
+  .hl{grid-template-columns:1fr;row-gap:20px}
+}
+@media (max-width:600px){.r4{grid-template-columns:1fr}.nums div,.nums div:first-child{grid-column:span 9}}
+
+/* Schede progetto uniformi: stato, titolo, una riga, tre caratteristiche, tipo e ruolo */
+.idx{row-gap:72px}
+.r3.idx>:nth-child(3n+1){grid-column:2}
+.proj .pd{margin-top:8px;font-size:17px;line-height:1.5;color:var(--ink)}
+.proj .pf{margin-top:14px;border-top:1px solid var(--rule)}
+.proj .pf li{padding:9px 0 10px 18px;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.45;color:var(--ink-2);position:relative}
+.proj .pf li::before{content:"";position:absolute;left:2px;top:.95em;width:7px;height:1px;background:var(--red)}
+.proj .pk{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.proj .pk dt{font:400 14px/1.5 var(--mono);color:var(--ink-2)}
+.proj .pk dd{font-size:15px;line-height:1.4;margin-top:2px}
+@media (max-width:1000px){.r3.idx>:nth-child(3n+1){grid-column:auto}}
+
+/* Talk, scritti e community: una tavola dal talk, poi l'elenco */
+.ev-g{margin-top:48px;align-items:start}
+.ev-pl{grid-column:2/6;position:sticky;top:96px}
+.ev-pl .pl{aspect-ratio:4/3}
+.ev-pl figcaption{margin-top:10px;color:var(--ink-2)}
+.ev{grid-column:6/10;border-top:1px solid var(--ink)}
+.ev>li{border-bottom:1px solid var(--rule);padding:14px 0 18px}
+.ev .lbl{color:var(--ink-2)}
+.ev h3{font:400 var(--s3)/1.2 var(--serif);letter-spacing:-.01em;margin-top:6px}
+.ev h3+p{margin-top:6px;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.ev .go{display:inline-block;margin-top:10px}
+.ev a.go:hover,.cert a.go:hover{text-decoration:underline;text-underline-offset:4px}
+.iss summary{cursor:pointer;list-style:none}
+.iss summary::-webkit-details-marker{display:none}
+.iss ol{margin-top:8px;border-top:1px solid var(--rule)}
+.iss li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:7px 0;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.4}
+.iss li span{font:400 14px/1.4 var(--mono);color:var(--ink-2)}
+.iss li a:hover{text-decoration:underline;text-underline-offset:3px}
+/* Certificazioni, in ordine di pertinenza */
+.cert{margin-top:48px}
+.cert li{grid-column:2/10;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:var(--gap);border-top:1px solid var(--rule);padding:14px 0 16px;align-items:baseline}
+.cert li:first-child{border-top-color:var(--ink)}
+.cert li:last-child{border-bottom:1px solid var(--rule)}
+.c-n{grid-column:1/3;font:360 var(--s2)/1 var(--serif);letter-spacing:-.025em}
+.cert li:not(:first-child) .c-n{font-size:var(--s3);line-height:1.2;letter-spacing:-.01em}
+.c-f{grid-column:3/6;font-size:18px}
+.c-i{grid-column:6/9;font:400 14px/1.5 var(--mono);color:var(--ink-2)}
+.c-x{grid-column:3/9;margin-top:12px;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.c-x .go{margin-left:.4em;white-space:nowrap}
+.cert-x{margin-top:20px}
+.cert-x span{grid-column:2/8;font-size:16px;line-height:1.5;color:var(--ink-2)}
+@media (max-width:1000px){
+  .ev-pl{grid-column:1/10;position:static}
+  .ev{grid-column:1/10;margin-top:32px}
+  .cert li,.cert-x span{grid-column:1/10}
+  .cert li{grid-template-columns:1fr;row-gap:4px}
+  .c-n,.c-f,.c-i,.c-x{grid-column:1}
+}
+.steps ol{grid-template-columns:repeat(3,minmax(0,1fr))}
+.steps .pl{aspect-ratio:438/253}
+.steps .pl img{mix-blend-mode:normal}
+@media (max-width:1000px){.steps ol{grid-template-columns:1fr}.steps,.lead .hl,.lead .hl-l{grid-column:1/10}}
+.proj h4{font:400 var(--s3)/1.2 var(--serif);letter-spacing:-.01em;margin-top:2px}
+.proj[href]:hover h4{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.sh h2,.sh-n{font:360 clamp(28px,3vw,40px)/1.1 var(--serif);letter-spacing:-.015em}
+.sh-n{visibility:visible;color:var(--ink-2)}
+.sh{padding-top:18px}
+.grp{position:relative;margin-top:88px;padding-top:12px;align-items:baseline;row-gap:4px}
+.grp::before{content:"";position:absolute;left:var(--m);right:var(--m);top:0;border-top:1px solid var(--rule)}
+.grp-t{grid-column:2/5;font:400 var(--s3)/1.2 var(--serif);letter-spacing:-.01em}
+.grp-d{grid-column:5/10;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.grp+.lead{margin-top:32px}
+.grp+.r3{margin-top:32px}
+.lead+.grp{margin-top:96px}
+.proj .ty{color:var(--ink)}
+.cf-a{margin-top:14px;border-top:1px solid var(--rule)}
+.cf-a div{padding-top:8px}
+.cf-a dt{font:400 14px/1.5 var(--mono);color:var(--ink-2)}
+.cf-a dd{font-size:16px;line-height:1.45}
+#come-lavoro .method-g{margin-top:40px;margin-bottom:64px}
+.cf-i{display:flex;flex-direction:column}
+.cf-i h3+p{margin-top:10px;margin-bottom:16px;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.r4.cf{align-items:stretch}
+.cf-a{margin-top:0}
+@media (min-width:1001px){.cf-i h3+p{min-height:9em}}
+.nums dt{min-height:4.5em}
+.start{margin-top:24px;padding-top:12px;border-top:1px solid var(--rule);font-size:17px;line-height:1.45;max-width:46ch}
+.start .lbl{display:block;color:var(--ink-2)}
+.start a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.books a:not([href]):hover{background:none}
+.talk .q:not([href]):hover{text-decoration:none}
+#interviste+.talks{margin-top:32px}
+@media (max-width:1000px){.grp-t,.grp-d{grid-column:1/10}.grp{margin-top:64px}.sh-n{grid-column:1/10}.sh h2{grid-column:1/10}}
+@media (max-width:600px){.nums div,.nums div:first-child{grid-column:span 4}.nums dd{font-size:56px}}
+@media (max-width:560px){.lead .kv{grid-template-columns:1fr 1fr;row-gap:16px}}
+
+/* one scale: section > lead project > group > project > text */
+.sh h2,.sh-n{font-size:clamp(34px,3.6vw,52px);line-height:1.05;letter-spacing:-.02em}
+.sh{padding-top:20px}
+.intro-row{margin-top:28px}
+.intro-row .intro,.pb .intro{grid-column:2/7;font-size:19px;line-height:1.5;color:var(--ink-2)}
+.lead-t{font-size:clamp(30px,2.8vw,42px)}
+.say{font-size:clamp(26px,2.3vw,34px)}
+.grp{margin-top:104px;padding-top:16px;row-gap:6px}
+.grp-t,.grp-d{grid-column:2/7}
+.grp-t{font:400 clamp(24px,2vw,30px)/1.15 var(--serif);letter-spacing:-.015em}
+.grp-d{font-size:17px;line-height:1.5}
+.grp+.lead,.grp+.r3{margin-top:40px}
+.hl-l{display:flex;gap:32px;margin-top:32px}
+.talk .q{font-size:clamp(22px,1.9vw,28px);line-height:1.2;min-height:0;margin-top:20px}
+.talk .ik{margin-top:24px}
+#interviste+.talks{margin-top:40px}
+/* short cards: plate, status, title, one line, link; rows shared so they line up */
+.r3.idx{row-gap:64px}
+.proj .st{margin-top:16px}
+.proj h4{margin-top:4px}
+.proj .pd{margin-top:8px;color:var(--ink-2)}
+.proj .more{margin-top:14px;justify-self:start;align-self:start}
+.proj:hover h4{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+@media (min-width:1001px){@supports (grid-template-rows:subgrid){
+.r3.idx{row-gap:0}
+.r3.idx>.proj{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:0}
+}}
+@media (max-width:1000px){.intro-row .intro,.pb .intro,.grp-t,.grp-d{grid-column:1/10}.grp{margin-top:72px}}
+</style>
+<!--cc:css--><style>
+.cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:560px;margin-left:auto;background:var(--paper,#EEF2F0);color:var(--ink,#123F37);border:1px solid var(--ink,#123F37);padding:16px 18px 18px;font:400 16px/1.5 var(--serif,Georgia,serif);box-shadow:0 8px 24px rgba(18,63,55,.12)}
+.cc[hidden]{display:none}
+.cc b{display:block;font:400 14px/1.5 var(--mono,ui-monospace,monospace);margin-bottom:6px}
+.cc p{color:var(--ink-2,#2F5149)}
+.cc a{text-decoration:underline;text-underline-offset:3px}
+.cc-b{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.cc-b button{font:400 14px/1 var(--mono,ui-monospace,monospace);padding:11px 16px;border:1px solid var(--ink,#123F37);background:transparent;color:inherit;cursor:pointer}
+.cc-b .cc-y{background:var(--ink,#123F37);color:var(--paper,#EEF2F0)}
+.cc-b button:focus-visible{outline:2px solid var(--red,#C42A3C);outline-offset:2px}
+.foot-l button.cc-open{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+</style><!--/cc:css-->
+<!--ask:css--><style>
+.ask{margin-top:20px;font:400 16px/1.5 var(--serif)}
+.ask .lbl{display:flex;justify-content:space-between;gap:12px;color:var(--ink)}
+.ask .ask-ai{color:var(--ink-2)}
+.ask-row{display:flex;margin-top:8px;border:1px solid var(--ink);background:var(--paper)}
+.ask-row input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:400 17px/1.4 var(--serif);padding:12px 12px}
+.ask-row input::placeholder{color:var(--ink-2);opacity:.75}
+.ask-row input:focus{outline:none}
+.ask-row:focus-within{outline:2px solid var(--red);outline-offset:2px}
+.ask-row button{flex:none;border:0;border-left:1px solid var(--ink);background:var(--ink);color:var(--paper);font:500 14px/1 var(--mono);padding:0 16px;cursor:pointer}
+.ask-row button:disabled{opacity:.6;cursor:wait}
+.ask-sg{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ask-sg[hidden]{display:none}
+.ask-sg button{font:400 13px/1.3 var(--mono);color:var(--ink);background:transparent;border:1px solid var(--rule);padding:6px 9px;cursor:pointer;text-align:left}
+.ask-sg button:hover{border-color:var(--ink)}
+.ask-out{margin-top:14px;max-height:360px;overflow:auto;border-top:1px solid var(--rule)}
+.ask-out[hidden]{display:none}
+.ask-m{padding:12px 0;border-bottom:1px solid var(--rule)}
+.ask-m .q{font:400 13px/1.5 var(--mono);color:var(--ink-2)}
+.ask-m .a{margin-top:4px;color:var(--ink);white-space:pre-line;overflow-wrap:anywhere}
+.ask-m .a a{text-decoration:underline;text-underline-offset:3px}
+.ask-m .a.wait{color:var(--ink-2)}
+.ask-m .a.err{color:var(--red)}
+.ask-n{margin-top:10px;font:400 12px/1.5 var(--mono);color:var(--ink-2)}
+@media (max-width:1000px){.ask{max-width:420px}}
+</style><!--/ask:css-->
+<link href="/favicon.ico" rel="icon" sizes="32x32"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<style id="lng-css">.bar nav a{white-space:nowrap}.bar nav a.lng{display:inline!important;padding-left:20px;border-left:1px solid var(--rule,#9FB3AD)}@media (max-width:1320px){.bar nav{gap:20px}}@media (max-width:1180px){.bar-r{display:none}}</style>
+</head>
+<body>
+<header class="bar">
+<div class="g">
+<a class="mark" href="#top">Vito Semeraro</a>
+<span class="bar-r">AI Product Manager and PM builder, Milan</span>
+<nav aria-label="Main"><a href="#come-lavoro">How I work</a>
+<a href="#progetti">Projects</a>
+<a href="#playbook">Playbook</a>
+<a href="#talk">Talks</a>
+<a href="#contatti">Contact</a>
+<a class="lng" href="/" hreflang="it" lang="it" title="Italiano">IT</a></nav>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="g hero-g">
+<h1><span class="h1-r">AI Product Manager and PM builder</span>I design, build <br/>and bring AI <br/>into business processes.</h1>
+<figure class="portrait">
+<div class="pl"><canvas aria-hidden="true" class="plot" data-src="/assets/img/6535afb5a0.webp"></canvas><img alt="Vito Semeraro, pen portrait from a photo by Giovanni Miele" height="1152" src="/assets/img/6535afb5a0.webp" width="928"/></div>
+<!--ask--><form aria-label="Ask Vito, AI assistant" autocomplete="off" class="ask" id="ask">
+<label class="lbl" for="ask-q">Ask Vito <span class="ask-ai">AI assistant</span></label>
+<div class="ask-row"><input enterkeyhint="send" id="ask-q" maxlength="400" name="q" placeholder="What would you like to know?" type="text"/><button aria-label="Ask" type="submit">Ask <span aria-hidden="true">→</span></button></div>
+<div class="ask-sg" id="ask-sg"><button type="button">What is staged.ai?</button><button type="button">How do you work with AI agents?</button><button type="button">What workshops do you run?</button></div>
+<div aria-live="polite" class="ask-out" hidden="" id="ask-out"></div>
+<p class="ask-n">An AI answers using only the text on this site. It can make mistakes: write to me to confirm.</p>
+</form><!--/ask-->
+</figure>
+<div class="lede rv">
+<p>I’ve worked in digital for twenty years: I started as a designer, and for more than ten years I’ve led products in media, retail, banking and education. Today I lead digital products at a large publishing group, and I build things myself: prototypes with Claude Design, software with AI agents, automated tests, functional analyses that are generated and then verified.</p>
+<p class="ctas"><a class="go" href="#progetti">See the projects <span aria-hidden="true">→</span></a><a class="go" href="#contatti">Write to me <span aria-hidden="true">→</span></a></p>
+<p class="start"><span class="lbl">Start here</span><a href="#staged">staged.ai, the SaaS I built on my own with Claude Code <span aria-hidden="true">→</span></a></p>
+</div>
+<div class="clients rv">
+<p class="lbl">I’ve worked for and with</p>
+<ul><li>Leroy Merlin</li><li>Bricocenter</li><li>Intesa Sanpaolo</li><li>Bocconi University</li><li>BMW</li></ul>
+</div>
+</div>
+</section>
+<section class="sec" id="come-lavoro">
+<div class="g sh"><span class="sh-n">01</span><h2>How I work</h2></div>
+<div class="g method-g">
+<p class="say rv">Four phases. AI agents do the work, I approve every step.</p>
+<figure class="stamp-pl">
+<div class="pl"><canvas aria-hidden="true" class="plot" data-src="/assets/img/65c677c651.webp"></canvas><img alt="" loading="lazy" src="/assets/img/65c677c651.webp"/></div>
+<figcaption><span class="tv">Plate 2</span>The PM’s stamp</figcaption>
+</figure>
+</div>
+<div class="r4 cf">
+<article class="cf-i rv"><p class="lbl">01</p><h3>Discover and design</h3><p>I start from people, not technology. I use design thinking to understand the problem and Claude Design to turn an idea into a prototype that users can try within a few hours.</p><dl class="cf-a"><div><dt>Agent</dt><dd>Dedicated skills and Claude Design</dd></div><div><dt>The PM approves</dt><dd>the problem and the prototype, after users have tried it</dd></div></dl></article>
+<article class="cf-i rv"><p class="lbl">02</p><h3>Build with agents</h3><p>Vibe coding, yes, but governed. With Claude Code, Skills and MCP I take an idea all the way to a working product: login, backend, data, costs under control. That way I validate in days and speak the same language as technical teams.</p><dl class="cf-a"><div><dt>Agent</dt><dd>Claude Code</dd></div><div><dt>The PM approves</dt><dd>every step the agent takes</dd></div></dl></article>
+<article class="cf-i rv"><p class="lbl">03</p><h3>Test and document</h3><p>An AI that makes mistakes loses users’ trust. I automate the test suite with agents and Playwright, and I generate business and functional analyses that I then check line by line.</p><dl class="cf-a"><div><dt>Agent</dt><dd>QA agent, AI-generated analyses</dd></div><div><dt>The PM approves</dt><dd>the quality of the outputs, every analysis and every ticket</dd></div></dl></article>
+<article class="cf-i rv"><p class="lbl">04</p><h3>Drive adoption</h3><p>Technology is the easy part. Training on real work, a community of “champion” colleagues, adoption KPIs collected without monitoring people. With a certified method (PMI-CPMAI).</p><dl class="cf-a"><div><dt>Agent</dt><dd>None: this is where people work</dd></div><div><dt>The PM approves</dt><dd>the adoption KPIs</dd></div></dl></article>
+</div>
+<dl aria-label="In numbers" class="g nums rv">
+<div><dt>years in digital</dt><dd>20</dd></div>
+<div><dt>AI projects in the portfolio</dt><dd>6</dd></div>
+<div><dt>certifications</dt><dd>5</dd></div>
+<div><dt>book and 14 column issues for AgileItalia</dt><dd>1</dd></div>
+</dl>
+</section>
+<section class="sec" id="progetti">
+<div class="g sh"><span class="sh-n">02</span><h2>Projects</h2></div>
+<p class="g intro-row"><span class="intro rv">Products I built myself, projects for companies and clients, studies.</span></p>
+<div class="g grp"><h3 class="grp-t">Featured</h3><p class="grp-d">A product of my own, built single-handedly from idea to beta.</p></div>
+<article class="g lead" id="staged">
+<h4 class="lead-t rv"><a href="https://home-staged.ai/">staged.ai</a></h4>
+<p class="desc rv">Virtual home staging: a SaaS built single-handedly with Claude Code, validated with a community of beta testers.</p>
+<div class="modes steps">
+<p class="lbl">How it works, in three steps</p>
+<ol>
+<li class="rv"><div class="pl"><img alt="staged.ai, screen for uploading photos" loading="lazy" src="/assets/img/c0010a0ba6.webp"/></div><p class="cap"><span class="tv">Plate 3</span>Step 1</p><b>Upload the photos</b><span>For each shot you choose a purpose: home staging, renovation, retouching and decluttering, empty the room.</span></li>
+<li class="rv"><div class="pl"><img alt="staged.ai, screen with style and budget preferences" loading="lazy" src="/assets/img/ea66ee1d2d.webp"/></div><p class="cap"><span class="tv">Plate 4</span>Step 2</p><b>Set style and budget</b><span>City, style and a real Sikkens palette. Walls, windows and proportions stay those of the room.</span></li>
+<li class="rv"><div class="pl"><img alt="staged.ai, screen with the result and the estimate" loading="lazy" src="/assets/img/711c90f9c6.webp"/></div><p class="cap"><span class="tv">Plate 5</span>Step 3</p><b>Result and estimate</b><span>Photorealistic staging, works with local costs and an estimate, saved in a project you can share under your own brand.</span></li>
+</ol>
+</div>
+<p class="hl-l rv"><a class="go" href="/en/projects/staged-ai/">Read more <span aria-hidden="true">→</span></a><a class="go" href="https://home-staged.ai/">home-staged.ai <span aria-hidden="true">→</span></a></p>
+</article>
+<div class="g grp"><h3 class="grp-t">Other products and studies of mine</h3><p class="grp-d">Conceived and developed by me.</p></div>
+<div class="r3 idx">
+<a class="proj rv" href="/en/projects/compliance-copilot/">
+<div class="pl"><canvas aria-hidden="true" class="plot" data-src="/assets/img/d76bcb4702.webp"></canvas><img alt="" loading="lazy" src="/assets/img/d76bcb4702.webp"/></div>
+<p class="lbl st"><span class="tv">Plate 6</span>Working POC, synthetic data</p>
+<h4>Compliance Copilot</h4>
+<p class="pd">An assistant that answers only from sources, for regulated sectors such as insurance.</p>
+<span class="go more">Read more <span aria-hidden="true">→</span></span>
+</a>
+<a class="proj rv" href="/en/projects/pm-discovery-pipeline/">
+<div class="pl"><canvas aria-hidden="true" class="plot" data-src="/assets/img/8fd798d7ab.webp"></canvas><img alt="" loading="lazy" src="/assets/img/8fd798d7ab.webp"/></div>
+<p class="lbl st"><span class="tv">Plate 7</span>Claude skills, in use</p>
+<h4>PM Discovery Pipeline</h4>
+<p class="pd">Five Claude skills that take an idea from market map to test plan.</p>
+<span class="go more">Read more <span aria-hidden="true">→</span></span>
+</a>
+<a class="proj rv" href="/en/projects/ai-project-frameworks/">
+<div class="pl"><canvas aria-hidden="true" class="plot" data-src="/assets/img/fc0f60832e.webp"></canvas><img alt="" loading="lazy" src="/assets/img/fc0f60832e.webp"/></div>
+<p class="lbl st"><span class="tv">Plate 8</span>Paper in preparation</p>
+<h4>Frameworks for AI projects</h4>
+<p class="pd">15 frameworks classified into 4 levels and scored on six dimensions, in an interactive map.</p>
+<span class="go more">Read more <span aria-hidden="true">→</span></span>
+</a>
+</div>
+<div class="g grp"><h3 class="grp-t">For companies and clients</h3><p class="grp-d">As a product manager or product owner inside teams and organisations, or building the solution myself.</p></div>
+<div class="r3 idx">
+<a class="proj rv" href="/en/projects/growing-lab/">
+<div class="pl"><canvas aria-hidden="true" class="plot" data-src="/assets/img/e7184b97a1.webp"></canvas><img alt="" loading="lazy" src="/assets/img/e7184b97a1.webp"/></div>
+<p class="lbl st"><span class="tv">Plate 9</span>Pilot with demo, on hold</p>
+<h4>Growing Lab</h4>
+<p class="pd">Visibility in AI engines and a conversational coach for a career coaching firm.</p>
+<span class="go more">Read more <span aria-hidden="true">→</span></span>
+</a>
+<a class="proj rv" href="/en/projects/standupway/">
+<div class="pl"><canvas aria-hidden="true" class="plot" data-src="/assets/img/e75b4f5aaf.webp"></canvas><img alt="" loading="lazy" src="/assets/img/e75b4f5aaf.webp"/></div>
+<p class="lbl st"><span class="tv">Plate 10</span>In production, then funded</p>
+<h4>StandUpWay</h4>
+<p class="pd">A health-tech platform for patients and care teams in addiction recovery programmes.</p>
+<span class="go more">Read more <span aria-hidden="true">→</span></span>
+</a>
+</div>
+</section>
+<section class="sec" id="playbook">
+<div class="g sh"><span class="sh-n">03</span><h2>Playbook</h2></div>
+<div class="pb">
+<p class="g intro-row"><span class="intro rv">The method behind the projects: what I’ve learned taking products and AI into production.</span></p>
+<ol class="g books">
+<li class="rv"><a><span class="b-c">Quality</span><span class="b-t">The PO leads, the agent executes: automating testing</span><span class="b-d">The product owner becomes the director of automated testing: they own the domain knowledge and the decisions, while an AI agent acts as the technical driver.</span></a></li>
+<li class="rv"><a><span class="b-c">Adoption</span><span class="b-t">Bringing an AI tool into a team</span><span class="b-d">Technology is the easy part. The hard part is making people feel the tool works for them.</span></a></li>
+<li class="rv"><a><span class="b-c">Discovery</span><span class="b-t">From research to roadmap: hypotheses, not opinions</span><span class="b-d">Every design choice becomes a hypothesis that can be disproved.</span></a></li>
+</ol>
+</div>
+</section>
+<section class="sec" id="talk">
+<div class="g sh"><span class="sh-n">04</span><h2>Talks, interviews and writing</h2></div>
+<div class="g ev-g">
+<figure class="ev-pl rv">
+<div class="pl"><canvas aria-hidden="true" class="plot" data-src="/assets/img/00409ab7f6.webp"></canvas><img alt="Vito Semeraro at the open mic of Product Heroes’ Product Week, pen drawing" loading="lazy" src="/assets/img/00409ab7f6.webp"/></div>
+<figcaption><span class="tv">Plate 11</span>Open mic at Product Heroes’ Product Week, B4i – Bocconi for Innovation, Milan, 21 May 2026</figcaption>
+</figure>
+<ul class="ev">
+<li class="rv"><p class="lbl">Talk · 21 May 2026</p><h3>Product Heroes’ Product Week, B4i – Bocconi for Innovation</h3><p>Open mic on how I use AI in my work as a product manager, with staged.ai as the case study.</p><a class="go" href="https://luma.com/5syvbqlt">The event <span aria-hidden="true">→</span></a></li>
+<li class="rv"><p class="lbl">Podcast · 30 January 2020</p><h3>Agilisti Anonimi, episode 42</h3><p>IAD special: legacy architectures and innovation.</p><a class="go" href="https://www.spreaker.com/episode/42-speciale-iad-vito-semeraro-architetture-legacy-ed-innovazione--20076834">Listen <span aria-hidden="true">→</span></a></li>
+<li class="rv"><p class="lbl">Column · 2020–2022 · 14 issues</p><h3>“Oltre l’IT” (Beyond IT) for AgileItalia magazine</h3><p>Interviews with people who took Agile beyond software: pharma, hardware, construction, professional firms, universities, marketing, proptech, digital maps.</p>
+<details class="iss"><summary class="go">The 14 issues <span aria-hidden="true">↓</span></summary><ol><li><span>1/2020</span><a href="https://pubhtml5.com/vbdo/njiu/basic/">The evolution of the Open Source model towards Open SaaS</a></li><li><span>2/2020</span><a href="https://pubhtml5.com/vbdo/fmjv/basic/">Frederic Naar: Toyota’s Lean in a tour operator</a></li><li><span>3/2020</span><a href="https://pubhtml5.com/vbdo/kdcf/basic/">Lundbeck Italia: Giuseppina Cuccurullo, Agile HR</a></li><li><span>4/2020</span><a href="https://pubhtml5.com/vbdo/ttpe/basic/">Claudio Saurin: Scrum and innovation in industrial products</a></li><li><span>5/2020</span><a href="https://pubhtml5.com/vbdo/mctb/basic/">Felice Pescatore: Agile in civil construction SMEs</a></li><li><span>6/2020</span><a href="https://pubhtml5.com/vbdo/rczn/6_2020:_Middle_Management/">Agile in mechanical engineering teams, with Daniela Rinaldi (Vimar)</a></li><li><span>1/2021</span><a href="https://pubhtml5.com/vbdo/mynm/basic/">Valerio Alba: Agile coaching in professional firms</a></li><li><span>2/2021</span><a href="https://pubhtml5.com/vbdo/nhjt/basic/">Giacomo Cabri (University of Modena and Reggio Emilia): Agile at university</a></li><li><span>3/2021</span><a href="https://pubhtml5.com/vbdo/gbis/basic/">Piero Tagliapietra: Agile and marketing in SMEs</a></li><li><span>5/2021</span><a href="https://pubhtml5.com/vbdo/avys/basic/">Piero Savastano: Agile and data science</a></li><li><span>6/2021</span><a href="https://pubhtml5.com/vbdo/grpb/basic/">Casavo, Lorenzo Cassulo: the culture of digital product</a></li><li><span>1/2022</span><a href="https://pubhtml5.com/vbdo/iddc/basic/">forma.lms and microlearning, with Alberto Pastorelli</a></li><li><span>2/2022</span><a href="https://pubhtml5.com/vbdo/bewy/basic/">Agile and personal growth, with Stefano Pistorio</a></li><li><span>5/2022</span><a href="https://agileitalia.agileforitaly.com/numeri/AgileItalia_5_2022_HiRes.pdf">HERE Technologies: Francesco Barresi</a></li></ol></details></li>
+<li class="rv"><p class="lbl">Book · 2020</p><h3>Storia di Agile. Da Waterfall a Scrum (A History of Agile: from Waterfall to Scrum)</h3><p>The history of Agile methods, from their origins to Scrum, as an ebook (in Italian).</p><a class="go" href="https://www.amazon.it/Storia-Agile-Waterfall-conoscere-metodologia-ebook/dp/B086RVQ6K5">On Amazon <span aria-hidden="true">→</span></a></li>
+<li class="rv"><p class="lbl">Community</p><h3>Meetups and community</h3><p>I organise the meetups of the Italian community of Lenny’s Newsletter. At the AgileForItaly and Visione Agile meetup in May 2020 I spoke about how companies reacted to Covid.</p></li>
+</ul>
+</div>
+<div class="g grp" id="interviste"><h3 class="grp-t">Il Lato Umano dell’AI (The Human Side of AI), the interviews</h3><p class="grp-d">I interview Italian AI practitioners and researchers about what benchmarks don’t measure: people, responsibility, trust. In Italian.</p></div>
+<div class="r2 talks">
+<article class="talk rv">
+<p class="lbl">April 2026</p>
+<h4 class="who-n">Walter Riviera</h4>
+<p class="who-r">Chief AI Officer</p>
+<a class="q">The human being is a universe still to be discovered</a>
+<p class="lbl ik">Four key ideas</p>
+<ul>
+<li>Responsible AI is not AI ethics: the difference changes everything.</li>
+<li>Architectural choices have geopolitical implications.</li>
+<li>Work moves, it doesn’t disappear.</li>
+<li>Responsibility is always personal.</li>
+</ul>
+</article>
+<article class="talk rv">
+<p class="lbl">March 2026</p>
+<h4 class="who-n">Fabrizio Degni</h4>
+<p class="who-r">AI Ethics and Data Governance</p>
+<a class="q">Cognitive sovereignty, compliance theatre and the future of AI</a>
+<p class="lbl ik">Three key ideas</p>
+<ul>
+<li>The paradox of perception.</li>
+<li>Compliance or theatre?</li>
+<li>Cognitive sovereignty.</li>
+</ul>
+</article>
+</div>
+</section>
+<section class="sec" id="certificazioni">
+<div class="g sh"><span class="sh-n">05</span><h2>Certifications</h2></div>
+<ol class="g cert">
+<li class="rv"><span class="c-n">PMI-CPMAI</span><span class="c-f">Certified Professional in Managing AI</span><span class="c-i">PMI · 2026</span><p class="c-x">For anyone preparing for it, I built a revision quiz on NotebookLM with several difficulty levels. <a class="go" href="https://notebook.google.com/notebook/2f9db77d-cdc4-4cc8-b5d9-c9f65d593597">Try the quiz <span aria-hidden="true">→</span></a></p></li>
+<li class="rv"><span class="c-n">PSPO I</span><span class="c-f">Professional Scrum Product Owner</span><span class="c-i">Scrum.org · 2018</span></li>
+<li class="rv"><span class="c-n">PSM I</span><span class="c-f">Professional Scrum Master</span><span class="c-i">Scrum.org · 2018</span></li>
+<li class="rv"><span class="c-n">AgilePM</span><span class="c-f">AgilePM Foundation</span><span class="c-i">APMG International · 2019</span></li>
+<li class="rv"><span class="c-n">PRINCE2</span><span class="c-f">PRINCE2 Foundation</span><span class="c-i">APMG International · 2015</span></li>
+</ol>
+<p class="g cert-x"><span class="rv">Also: four PMI courses on GenAI for project managers (2025), namely Generative AI Overview, Practical Application of Gen AI, Data Landscape of GenAI and Prompt Engineering, and AWS Partner Accreditation, Business (2021).</span></p>
+</section>
+<section class="sec contact" id="contatti">
+<div class="g sh"><span class="sh-n">06</span><h2>Contact</h2></div>
+<div class="g contact-g">
+<div class="c-main">
+<h2 class="big">Shall we talk?</h2>
+<a class="mail" data-d="gmail.com" data-u="vsemeraro" href="#">vsemeraro<span>@</span>gmail.com</a>
+<form class="news" onsubmit="return false">
+<label for="em"><b>One email a month from a PM builder</b><span>What I build, what works, what doesn’t. No hype.</span></label>
+<div class="field"><input autocomplete="email" id="em" placeholder="Your email" type="email"/><button type="submit">Subscribe →</button></div>
+</form>
+</div>
+<div class="colo">
+<a class="fc" href="https://www.linkedin.com/in/vsemeraro/"><b>For recruiters and companies</b>I’m open to conversations about AI Product Manager, AI Product Owner and AI Adoption Lead roles.<span class="go">My profile →</span></a>
+<a class="fc" href="#talk"><b>For events and communities</b>Talks, meetups, podcasts and community workshops on AI, product and agentic development.<span class="go">Speaking and community →</span></a>
+<a class="fc" href="/en/ai-method/"><b>The method</b>How to bring AI into teams and products, from prototype to adoption, and how people learn it at work.<span class="go">The method →</span></a>
+</div>
+</div>
+</section>
+</main>
+<footer class="foot">
+<div class="g foot-row"><span>Vito Semeraro</span><span class="f-m">© 2026</span><span class="foot-l"><a href="/en/about/">About</a><a href="https://www.linkedin.com/in/vsemeraro/">LinkedIn</a><a href="/en/ai-method/">Method</a><a href="/en/learning-ai-at-work/">Learning AI</a><a href="https://github.com/vitosemeraro">GitHub</a><a href="/en/privacy/">Privacy</a><button class="cc-open" type="button">Cookies</button></span></div>
+</footer>
+<script>(() => {
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const params = new URLSearchParams(location.search);
+// ?t=<seconds> freezes the clock for frame-by-frame checks; ?mx=&my= fakes a pointer (0..1)
+const frozen = params.has('t') ? parseFloat(params.get('t')) : null;
+const fake = params.has('mx') ? [parseFloat(params.get('mx')), parseFloat(params.get('my'))] : null;
+const now = () => frozen ?? performance.now() / 1000;
+
+const VERT = `attribute vec2 p; varying vec2 vUv; void main(){ vUv=p*.5+.5; vUv.y=1.-vUv.y; gl_Position=vec4(p,0.,1.); }`;
+
+// Every image is printed in one ink on the plate's ground.
+// plot:  a drawing is inked in by a pen sweeping from the upper left, heavy strokes first.
+//        With a second drawing, a divider splits the plate into after (left) and before (right),
+//        and the pointer moves the divider.
+// hatch: a photograph is redrawn in the plates' own language, cross-hatching at the
+//        isometric angles plus a contour line, inked in the same way.
+// On plain plates the pointer presses the paper like letterpress: the ink lifts into relief.
+const FRAG = `precision highp float;
+varying vec2 vUv;
+uniform sampler2D uTex; uniform sampler2D uTex2; uniform vec2 uRes; uniform float uImg; uniform float uP; uniform float uMode;
+uniform vec2 uM; uniform float uH; uniform float uPx; uniform vec3 uBg; uniform float uZoom; uniform float uContain; uniform float uTwo; uniform float uWipe;
+const vec3 INK=vec3(.071,.247,.216);
+float lum(vec3 c){ return dot(c,vec3(.299,.587,.114)); }
+float hash(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
+float noise(vec2 p){ vec2 i=floor(p),f=fract(p); f=f*f*(3.-2.*f);
+  return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y); }
+vec2 fit(vec2 uv,float ca){
+  bool wide=ca>uImg; if(uContain>.5) wide=!wide;
+  if(wide){ uv.y=(uv.y-.5)*uImg/ca+.5; } else { uv.x=(uv.x-.5)*ca/uImg+.5; }
+  return (uv-.5)/uZoom+.5; }
+float inside(vec2 uv){ return step(0.,uv.x)*step(uv.x,1.)*step(0.,uv.y)*step(uv.y,1.); }
+float inkOf(sampler2D t,vec2 uv){ return inside(uv)*(1.-smoothstep(.18,.93,lum(texture2D(t,uv).rgb))); }
+float hatch(vec2 fc,float ang,float sp,float w){
+  vec2 dir=vec2(cos(ang),sin(ang));
+  float s=dot(fc,dir);
+  float dist=abs(fract(s/sp)-.5)*sp;
+  return 1.-smoothstep(w-.6*uPx,w+.6*uPx,dist);
+}
+void main(){
+  float ca=uRes.x/uRes.y; vec2 uv=fit(vUv,ca);
+  vec2 px=1./uRes;
+  float a;
+  bool after=uTwo>.5 && vUv.x<uWipe;
+  if(uMode<.5){
+    a=after?inkOf(uTex2,uv):inkOf(uTex,uv);
+  } else {
+    // a darkness map, lifted so skin keeps its light
+    float l=lum(texture2D(uTex,uv).rgb);
+    float d=1.-pow(smoothstep(.04,.96,l),.5);
+    float sp=5.4*uPx, w=.4*uPx;
+    a=0.;
+    a=max(a,hatch(gl_FragCoord.xy,.5236,sp,w+(d-.3)*1.1*uPx)*step(.3,d));
+    a=max(a,hatch(gl_FragCoord.xy,-.5236,sp,w+(d-.55)*1.3*uPx)*step(.55,d));
+    a=max(a,hatch(gl_FragCoord.xy,1.5708,sp*.9,w+(d-.76)*1.8*uPx)*step(.76,d));
+    // contour from the luminance gradient
+    vec2 o=1.6/uRes;
+    float gx=lum(texture2D(uTex,uv+vec2(o.x,0.)).rgb)-lum(texture2D(uTex,uv-vec2(o.x,0.)).rgb);
+    float gy=lum(texture2D(uTex,uv+vec2(0.,o.y)).rgb)-lum(texture2D(uTex,uv-vec2(0.,o.y)).rgb);
+    a=max(a,smoothstep(.2,.38,length(vec2(gx,gy))));
+    a*=inside(uv);
+  }
+  // reveal: strokes appear in clusters, sweeping from the upper left, heavy ink first
+  float n=noise(vUv*vec2(ca,1.)*9.)*.55+noise(vUv*vec2(ca,1.)*41.)*.2;
+  float th=(vUv.x*.55+vUv.y*.45)*.62+n*.38-a*.12;
+  a*=smoothstep(th-.015,th+.015,uP*1.12-.04);
+  vec3 col=mix(uBg,INK,a);
+  if(uTwo>.5){
+    // the divider: a hairline with a small square stop
+    float lx=abs(vUv.x-uWipe)*uRes.x;
+    float line=1.-smoothstep(.5*uPx,1.2*uPx,lx);
+    float knob=step(abs(vUv.x-uWipe)*uRes.x,7.*uPx)*step(abs(vUv.y-.5)*uRes.y,7.*uPx);
+    col=mix(col,INK,max(line,knob)*smoothstep(.85,1.,uP));
+  } else if(uH>.001){
+    // letterpress relief under the pointer
+    float ax=inkOf(uTex,uv+vec2(px.x*1.5,0.))-inkOf(uTex,uv-vec2(px.x*1.5,0.));
+    float ay=inkOf(uTex,uv+vec2(0.,px.y*1.5))-inkOf(uTex,uv-vec2(0.,px.y*1.5));
+    vec2 L=normalize((uM-vUv)*vec2(ca,1.)+1e-4);
+    float fall=uH*smoothstep(.42,.0,length((vUv-uM)*vec2(ca,1.)));
+    col+=vec3(dot(vec2(ax,ay),L)*.35*fall);
+  }
+  gl_FragColor=vec4(col,1.);
+}`;
+
+function texture(gl, unit, img) {
+  gl.activeTexture(gl.TEXTURE0 + unit);
+  gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, img);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+}
+const load = src => new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = src; });
+
+function plate(canvas, mode, dur) {
+  const gl = canvas.getContext('webgl', { preserveDrawingBuffer: true, antialias: false });
+  if (!gl) return;
+  const sh = (t, s) => { const o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); if (!gl.getShaderParameter(o, gl.COMPILE_STATUS)) console.error(gl.getShaderInfoLog(o)); return o; };
+  const pr = gl.createProgram();
+  gl.attachShader(pr, sh(gl.VERTEX_SHADER, VERT)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FRAG)); gl.linkProgram(pr); gl.useProgram(pr);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  const U = n => gl.getUniformLocation(pr, n);
+  // the plate's ground is whatever its frame is painted with
+  const bg = (getComputedStyle(canvas.parentElement).backgroundColor.match(/[\d.]+/g) || [238, 242, 240]).slice(0, 3).map(v => v / 255);
+  const two = !!canvas.dataset.src2;
+  const rest = +(canvas.dataset.rest || .5);
+  const st = { p: 0, start: null, h: 0, th: 0, m: [.5, .5], tm: [.5, .5], w: 1, tw: 1, ready: false, ar: 1 };
+  if (fake) { st.th = st.h = 1; st.m = fake.slice(); st.tm = fake.slice(); }
+  Promise.all([load(canvas.dataset.src), two ? load(canvas.dataset.src2) : null]).then(([a, b]) => {
+    // a blocked texture (e.g. file:// in some browsers) leaves the plain <img> visible
+    try { texture(gl, 0, a); if (b) texture(gl, 1, b); } catch (e) { return; }
+    st.ar = a.width / a.height; st.ready = true; canvas.parentElement.classList.add('gl');
+    kick();
+  });
+  const host = canvas.closest('a, figure') || canvas.parentElement;
+  host.addEventListener('pointermove', e => {
+    const r = canvas.getBoundingClientRect();
+    st.tm = [(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]; st.th = 1;
+    if (two && st.p >= 1) st.tw = Math.min(1, Math.max(0, st.tm[0]));
+    kick();
+  });
+  host.addEventListener('pointerleave', () => { st.th = 0; kick(); });
+  if (frozen !== null) st.start = 0;
+  else new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { st.start = now(); o.disconnect(); kick(); } }), { threshold: .25 }).observe(canvas);
+  let running = false;
+  function kick() { if (!running && st.ready) loop(); }
+  function loop() {
+    running = true;
+    const r = canvas.getBoundingClientRect(), px = Math.min(devicePixelRatio, 2);
+    const W = Math.round(r.width * px), H = Math.round(r.height * px);
+    if (canvas.width !== W || canvas.height !== H) { canvas.width = W; canvas.height = H; }
+    gl.viewport(0, 0, W, H);
+    const t = now();
+    st.p = reduce ? 1 : st.start === null ? 0 : Math.min(1, (t - st.start) / dur);
+    // once the plate is inked, the divider slides in from the right edge to its resting place
+    if (two && st.start !== null && st.th === 0) {
+      const k = reduce ? 1 : Math.min(1, Math.max(0, (t - st.start - dur) / 1.2));
+      st.tw = 1 - (1 - rest) * (1 - Math.pow(1 - k, 3));
+    }
+    if (fake && two) st.tw = fake[0];
+    st.w += (st.tw - st.w) * (frozen !== null ? 1 : .14);
+    st.h += (st.th - st.h) * .12; st.m[0] += (st.tm[0] - st.m[0]) * .16; st.m[1] += (st.tm[1] - st.m[1]) * .16;
+    const e = 1 - Math.pow(1 - st.p, 2.2);
+    gl.uniform1i(U('uTex'), 0); gl.uniform1i(U('uTex2'), 1); gl.uniform2f(U('uRes'), W, H); gl.uniform1f(U('uImg'), st.ar);
+    gl.uniform1f(U('uP'), e); gl.uniform1f(U('uMode'), mode); gl.uniform2f(U('uM'), st.m[0], st.m[1]); gl.uniform1f(U('uH'), st.h); gl.uniform1f(U('uPx'), px);
+    gl.uniform3fv(U('uBg'), bg); gl.uniform1f(U('uZoom'), +(canvas.dataset.zoom || 1)); gl.uniform1f(U('uContain'), canvas.dataset.fit === 'contain' ? 1 : 0);
+    gl.uniform1f(U('uTwo'), two ? 1 : 0); gl.uniform1f(U('uWipe'), st.w);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    const settling = two && st.start !== null && st.th === 0 && t - st.start < dur + 1.3;
+    const busy = (st.start !== null && st.p < 1) || settling || Math.abs(st.tw - st.w) > .001 || Math.abs(st.th - st.h) > .002 || Math.hypot(st.tm[0] - st.m[0], st.tm[1] - st.m[1]) > .002;
+    if (busy && frozen === null) requestAnimationFrame(loop); else running = false;
+  }
+  addEventListener('resize', kick);
+}
+
+document.querySelectorAll('canvas.plot').forEach(c => plate(c, 0, 2.6));
+document.querySelectorAll('canvas.hatch').forEach(c => plate(c, 1, 2.8));
+
+// e-mail assembled at runtime so it never sits in the markup as one string
+document.querySelectorAll('.mail[data-u]').forEach(a => { a.href = 'mailto:' + a.dataset.u + '@' + a.dataset.d; });
+
+const els = document.querySelectorAll('.rv');
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+els.forEach(e => io.observe(e));
+if (frozen !== null) els.forEach(e => e.classList.add('in'));
+})();
+
+// the nav marks the section in view
+(() => {
+  const links = [...document.querySelectorAll('.bar nav a')];
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('main section[id]').forEach(s => io.observe(s));
+})();
+</script>
+<!--cc:body-->
+<div aria-label="Cookie preferences" aria-live="polite" class="cc" hidden="" id="cc" role="dialog">
+<b>Cookies</b>
+<p>I use Cloudflare to count visits without cookies. With your consent I also turn on Google Analytics, which uses cookies to see which pages and projects people find most interesting. <a href="/en/privacy/">Privacy</a></p>
+<div class="cc-b"><button class="cc-y" type="button">Accept</button><button class="cc-n" type="button">Decline</button></div>
+</div>
+<script>
+(function () {
+  var k = 'cc-v1', box = document.getElementById('cc'), c = null;
+  try { c = localStorage.getItem(k); } catch (e) {}
+  function save(v) { try { localStorage.setItem(k, v); } catch (e) {} box.hidden = true; }
+  if (c !== 'y' && c !== 'n') box.hidden = false;
+  box.querySelector('.cc-y').onclick = function () { save('y'); window.ccLoad(); ev('cookie_choice', {choice: 'accept'}); };
+  box.querySelector('.cc-n').onclick = function () { save('n'); };
+  document.querySelectorAll('.cc-open').forEach(function (b) { b.onclick = function () { box.hidden = false; box.querySelector('button').focus(); }; });
+
+  // events: gtag only queues them; nothing leaves the page without consent
+  function ev(n, p) { if (window.ccLoaded) gtag('event', n, p || {}); }
+  function where(el) { var s = el.closest('section[id]'); return s ? s.id : (el.closest('header') ? 'header' : el.closest('footer') ? 'footer' : 'other'); }
+  function txt(el) { return (el.textContent || '').replace(/\s+/g, ' ').replace(/[→↓]/g, '').trim().slice(0, 80); }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    var h = a.getAttribute('href') || '', p = {link_text: txt(a), section: where(a), link_url: a.href};
+    if (a.matches('.mail') || h.indexOf('mailto:') === 0) ev('contact_email', p);
+    else if (/\/(progetti|projects)\/[^/]+\/?$/.test(a.pathname) && a.host === location.host) ev('select_project', Object.assign(p, {project: a.pathname.split('/').filter(Boolean).pop()}));
+    else if (a.host && a.host !== location.host) ev('outbound_click', Object.assign(p, {domain: a.host}));
+    else if (a.matches('.go, .ctas a, .fc, .start a')) ev('click_cta', p);
+  }, true);
+  var nf = document.querySelector('form.news');
+  if (nf) nf.addEventListener('submit', function () { ev('newsletter_attempt', {section: where(nf)}); });
+  if ('IntersectionObserver' in window) {
+    var seen = {}, io = new IntersectionObserver(function (es) { es.forEach(function (x) {
+      if (x.isIntersecting && !seen[x.target.id]) { seen[x.target.id] = 1; ev('section_view', {section: x.target.id}); }
+    }); }, {threshold: .4});
+    document.querySelectorAll('main section[id]').forEach(function (s) { io.observe(s); });
+  }
+  var marks = [25, 50, 75, 90], hit = {};
+  addEventListener('scroll', function () {
+    var d = document.documentElement, pct = (scrollY + innerHeight) / d.scrollHeight * 100;
+    marks.forEach(function (m) { if (pct >= m && !hit[m]) { hit[m] = 1; ev('scroll_depth', {percent: m}); } });
+  }, {passive: true});
+})();
+</script>
+<script data-cf-beacon='{"token": "551c9cdb4d654f5e8e92b3f9f99096ca"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+<!--/cc:body-->
+<!--ask:js--><script>(() => {
+const EP = 'https://chiedi-a-vito.cfdist2.workers.dev/chat';
+const f = document.getElementById('ask'); if (!f) return;
+const q = document.getElementById('ask-q'), out = document.getElementById('ask-out'), sg = document.getElementById('ask-sg'), btn = f.querySelector('.ask-row button');
+const hist = [];
+const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = s => esc(s).replace(/\*\*(.+?)\*\*/g, '$1')
+  .replace(/https?:\/\/[^\s<)]+[^\s<).,;:!?]/g, u => '<a href="' + u + '"' + (u.startsWith('https://vitosemeraro.com') ? '' : ' target="_blank" rel="noopener"') + '>' + u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') + '</a>')
+  .replace(/[\w.+-]+@[\w-]+\.[\w.]+[\w]/g, m => '<a href="mailto:' + m + '">' + m + '</a>');
+async function ask(text) {
+  text = text.trim().slice(0, 400); if (!text || btn.disabled) return;
+  sg.hidden = true; out.hidden = false; btn.disabled = true; q.value = '';
+  const m = document.createElement('div'); m.className = 'ask-m';
+  m.innerHTML = '<p class="q"></p><p class="a wait">Searching the text on this site…</p>';
+  m.querySelector('.q').textContent = text; out.appendChild(m); out.scrollTop = out.scrollHeight;
+  const a = m.querySelector('.a');
+  hist.push({ role: 'user', content: text });
+  try {
+    const r = await fetch(EP, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: hist.slice(-12) }) });
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok || !d.answer) throw new Error(d.message || 'I can’t answer right now. You can write to vsemeraro@gmail.com.');
+    a.className = 'a'; a.innerHTML = fmt(d.answer); hist.push({ role: 'assistant', content: d.answer });
+  } catch (e) {
+    hist.pop(); a.className = 'a err'; a.innerHTML = fmt(e.message && !/fetch|network/i.test(e.message) ? e.message : 'I can’t answer right now. You can write to vsemeraro@gmail.com.');
+  }
+  btn.disabled = false; out.scrollTop = out.scrollHeight;
+  if (window.ccLoaded && window.gtag) gtag('event', 'ask_vito', { turn: Math.ceil(hist.length / 2) });
+}
+f.addEventListener('submit', e => { e.preventDefault(); ask(q.value); });
+sg.addEventListener('click', e => { const b = e.target.closest('button'); if (b) ask(b.textContent); });
+})();</script><!--/ask:js-->
+</body>
+</html>
