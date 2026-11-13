@@ -77,6 +77,7 @@ EN = f'''## English
 - [About]({DOMAIN}en/about/)
 - [The method]({DOMAIN}en/ai-method/)
 - [Learning AI at work]({DOMAIN}en/learning-ai-at-work/)
+- [A PM builder’s journal]({DOMAIN}en/journal/): all articles in English
 - [staged.ai]({DOMAIN}en/projects/staged-ai/)
 
 ''' if os.path.exists(os.path.join(PUB, 'en/index.html')) else ''
