@@ -7,6 +7,13 @@
       "firebase.json",
       "**/.*"
     ],
+    "redirects": [
+      {
+        "regex": "^/lab/generali-ai-visibility(?:/(?P<rest>.*))?$",
+        "destination": "/lab/generali-geo-ai-visibility-audit/:rest",
+        "type": 301
+      }
+    ],
     "headers": [
       {
         "source": "/lab/**",
