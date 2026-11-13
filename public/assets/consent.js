@@ -37,7 +37,7 @@
     if (!v && old) {
       var raw = null; try { raw = localStorage.getItem(old); } catch (e) {}
       if (raw != null) {
-        var yes = /^(y|1|yes|true|granted|accept(ed)?|all)$/i.test(raw) || /"analytics"\s*:\s*true/.test(raw);
+        var yes = /^(y|1|si|sì|yes|true|granted|accept(ed)?|all)$/i.test(raw) || /"analytics"\s*:\s*true/.test(raw);
         var no = /^(n|0|no|false|denied|reject(ed)?|tech)$/i.test(raw) || /"analytics"\s*:\s*false/.test(raw);
         if (yes || no) { var m = { v: VER, a: yes ? 1 : 0, t: Date.now() }; write(m); return m; }
       }
