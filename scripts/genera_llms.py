@@ -72,14 +72,40 @@ assert not BANNED.search('\n'.join(full)), 'testo vietato rimasto in llms-full.t
 def sec(prefix):
     return ''.join(f'- [{t}]({u}): {d}\n' for p, t, u, d in idx if p.startswith(prefix) and p != prefix + 'index.html')
 
+def h3s(rel):
+    # titoli h3 senza classe (le card dei servizi), non le FAQ
+    f = os.path.join(PUB, rel)
+    if not os.path.exists(f): return []
+    return [re.sub(r'<[^>]+>', '', t).strip() for t in re.findall(r'<h3>(.*?)</h3>', open(f, encoding='utf-8').read(), re.S)]
+
+SERV = ''
+_az, _ws = h3s('intelligenza-artificiale-per-aziende/index.html'), h3s('workshop-formazione-intelligenza-artificiale/index.html')
+if _az or _ws:
+    SERV = '## Servizi\n'
+    if _az: SERV += f'- AI in azienda ({DOMAIN}intelligenza-artificiale-per-aziende/): ' + '; '.join(_az) + '\n'
+    if _ws: SERV += f'- Workshop e formazione ({DOMAIN}workshop-formazione-intelligenza-artificiale/): ' + '; '.join(_ws) + '\n'
+    SERV += '\n'
+
+def en_list(sub):
+    out = ''
+    for f in sorted(glob.glob(f'en/{sub}/*/index.html', root_dir=PUB)):
+        h = open(os.path.join(PUB, f), encoding='utf-8').read()
+        if re.search(r'<meta name="robots" content="[^"]*noindex', h): continue
+        t = re.search(r'<title>(.*?)</title>', h, re.S)
+        if t: out += f'- [{t.group(1).strip().replace(" · Vito Semeraro", "")}]({DOMAIN}{os.path.dirname(f)}/)\n'
+    return out
+
 EN = f'''## English
 - [Home (English)]({DOMAIN}en/)
 - [About]({DOMAIN}en/about/)
 - [The method]({DOMAIN}en/ai-method/)
 - [Learning AI at work]({DOMAIN}en/learning-ai-at-work/)
 - [A PM builder’s journal]({DOMAIN}en/journal/): all articles in English
-- [staged.ai]({DOMAIN}en/projects/staged-ai/)
 
+### Journal (English)
+{en_list('journal')}
+### Projects (English)
+{en_list('projects')}
 ''' if os.path.exists(os.path.join(PUB, 'en/index.html')) else ''
 llms = f'''# Vito Semeraro
 
@@ -95,7 +121,7 @@ Sul sito c'è anche "Chiedi a Vito", un assistente AI che risponde solo dai test
 - [Tutti i progetti]({DOMAIN}progetti/)
 - [Diario da PM builder]({DOMAIN}diario/): tutti gli articoli su AI, Claude Code e agenti nel lavoro da product manager
 
-## Progetti
+{SERV}## Progetti
 {sec('progetti/')}
 {EN}## Contatti
 - Email: vsemeraro@gmail.com
