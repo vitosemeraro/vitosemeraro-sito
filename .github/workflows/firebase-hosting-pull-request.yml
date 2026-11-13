@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Aggiorna indice del Diario, home, menu e sitemap
+        run: python3 scripts/genera_diario.py public
       - name: Genera llms.txt e llms-full.txt (base dell'assistente Chiedi a Vito)
         run: python3 scripts/genera_llms.py public
       - uses: FirebaseExtended/action-hosting-deploy@v0

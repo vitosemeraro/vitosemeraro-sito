@@ -16,7 +16,7 @@ FIXES = [
     (re.compile(r'Oggi lavoro sui prodotti editoriali di [^,]+, e costruisco'), 'Costruisco'),
     (re.compile(r'Today I work on [^,]+, and I build'), 'I build'),
 ]
-SKIP_LINE = re.compile(r'^(Vito Semeraro|AI Product Manager e PM builder, Milano|Come lavoro|Progetti|Playbook|Talk|Contatti|EN|IT|Aziende|Workshop|LinkedIn|GitHub|Privacy|PrivacyCookie|Cookie|AccettaRifiuta|Vito Semeraro© 2026|C|\d\d|AI in azienda|Tutti i progetti →)$')
+SKIP_LINE = re.compile(r'^(Vito Semeraro|AI Product Manager e PM builder, Milano|Come lavoro|Progetti|Playbook|Talk|Contatti|Diario|EN|IT|Aziende|Workshop|LinkedIn|GitHub|Privacy|PrivacyCookie|Cookie|AccettaRifiuta|Vito Semeraro© 2026|C|\d\d|AI in azienda|Tutti i progetti →)$')
 
 
 class P(HTMLParser):
@@ -54,7 +54,7 @@ def page_text(path):
 pages = ['index.html', 'chi-sono/index.html', 'intelligenza-artificiale-per-aziende/index.html',
          'workshop-formazione-intelligenza-artificiale/index.html', 'progetti/index.html']
 pages += sorted(p for p in glob.glob('progetti/*/index.html', root_dir=PUB) if p != 'progetti/index.html')
-pages += sorted(glob.glob('diario/*/index.html', root_dir=PUB))
+pages += ['diario/index.html'] + sorted(glob.glob('diario/*/index.html', root_dir=PUB))
 pages += sorted(glob.glob('lab/*/index.html', root_dir=PUB))
 
 full, idx = [], []
@@ -70,7 +70,7 @@ for p in pages:
 assert not BANNED.search('\n'.join(full)), 'testo vietato rimasto in llms-full.txt'
 
 def sec(prefix):
-    return ''.join(f'- [{t}]({u}): {d}\n' for p, t, u, d in idx if p.startswith(prefix))
+    return ''.join(f'- [{t}]({u}): {d}\n' for p, t, u, d in idx if p.startswith(prefix) and p != prefix + 'index.html')
 
 EN = f'''## English
 - [Home (English)]({DOMAIN}en/)
@@ -92,6 +92,7 @@ Sul sito c'è anche "Chiedi a Vito", un assistente AI che risponde solo dai test
 - [Intelligenza artificiale per aziende]({DOMAIN}intelligenza-artificiale-per-aziende/): casi d'uso, prototipi con agenti AI, AI Act, adozione misurata
 - [Workshop e formazione sull'AI]({DOMAIN}workshop-formazione-intelligenza-artificiale/): formati per PM, team e manager, alfabetizzazione AI Act art. 4
 - [Tutti i progetti]({DOMAIN}progetti/)
+- [Diario da PM builder]({DOMAIN}diario/): tutti gli articoli su AI, Claude Code e agenti nel lavoro da product manager
 
 ## Progetti
 {sec('progetti/')}
@@ -100,7 +101,7 @@ Sul sito c'è anche "Chiedi a Vito", un assistente AI che risponde solo dai test
 - LinkedIn: https://www.linkedin.com/in/vsemeraro/
 - GitHub: https://github.com/vitosemeraro
 '''
-if any(p.startswith('diario/') for p, *_ in idx):
+if any(p.startswith('diario/') and p != 'diario/index.html' for p, *_ in idx):
     llms += '\n## Diario\n' + sec('diario/')
 if any(p.startswith('lab/') for p, *_ in idx):
     llms += '\n## Lab\n' + sec('lab/')
