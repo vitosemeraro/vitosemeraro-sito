@@ -559,6 +559,7 @@ footer button.cc-open{font:inherit;color:inherit;background:none;border:0;paddin
     var a = e.target.closest('a'); if (!a) return;
     var p = {link_text: txt(a), section: where(a), link_url: a.href};
     if (a.closest('.lang')) ev('lang_switch', Object.assign(p, {to: a.getAttribute('hreflang')}));
+    else if (/(^|\.)linkedin\.com$/.test(a.hostname)) ev('contact_linkedin', p);
     else if (a.host && a.host !== location.host) ev('outbound_click', Object.assign(p, {domain: a.host}));
     else if (a.matches('.btn')) ev('click_cta', p);
   }, true);

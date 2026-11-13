@@ -1052,6 +1052,7 @@ if (frozen !== null) els.forEach(e => e.classList.add('in'));
     var h = a.getAttribute('href') || '', p = {link_text: txt(a), section: where(a), link_url: a.href};
     if (a.matches('.mail') || h.indexOf('mailto:') === 0) ev('contact_email', p);
     else if (/\/(progetti|projects)\/[^/]+\/?$/.test(a.pathname) && a.host === location.host) ev('select_project', Object.assign(p, {project: a.pathname.split('/').filter(Boolean).pop()}));
+    else if (/(^|\.)linkedin\.com$/.test(a.hostname)) ev('contact_linkedin', p);
     else if (a.host && a.host !== location.host) ev('outbound_click', Object.assign(p, {domain: a.host}));
     else if (a.matches('.go, .ctas a, .fc, .start a')) ev('click_cta', p);
   }, true);
