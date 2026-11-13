@@ -3,24 +3,7 @@
 <head>
 <meta charset="utf-8">
 <!--cc:head-->
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied'});
-(function () {
-  var k = 'cc-v1', c = null;
-  try { c = localStorage.getItem(k); } catch (e) {}
-  window.ccLoad = function () {
-    if (window.ccLoaded) return; window.ccLoaded = true;
-    gtag('consent', 'update', {analytics_storage:'granted'});
-    var s = document.createElement('script'); s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2NLG8LPMZB';
-    document.head.appendChild(s);
-    gtag('js', new Date()); gtag('config', 'G-2NLG8LPMZB');
-  };
-  if (c === 'y') window.ccLoad();
-})();
-</script>
+<script src="/assets/consent.js?v=1.0.0" data-ga="G-2NLG8LPMZB" data-policy="/privacy/" data-legacy="cc-v1" data-accent="#123F37"></script>
 <!--/cc:head-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy e cookie · Vito Semeraro</title>
@@ -607,15 +590,6 @@ figcaption .tv,.cap .tv,.st .tv{min-width:0;margin-right:14px}
 </style>
 <style>.pv-t{grid-column:2/7;max-width:42em}.pv-t h2{font:400 var(--s3)/1.2 var(--serif);margin:36px 0 8px}.pv-t h2:first-child{margin-top:0}.pv-t p{margin-top:10px;font-size:18px;line-height:1.55;color:var(--ink-2)}.pv-t p b{color:var(--ink);font-weight:500}.pv-t a{text-decoration:underline;text-underline-offset:3px}.pv-b{font:inherit;color:var(--ink);background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer}.pv-d{font:400 14px/1.5 var(--mono)!important;margin-top:32px!important}.pv-t .mail{display:inline;margin:0;font:inherit;color:var(--ink);text-decoration-thickness:1px;text-underline-offset:3px}@media (max-width:1000px){.pv-t{grid-column:1/10}}</style>
 <!--cc:css--><style>
-.cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:560px;margin-left:auto;background:var(--paper,#EEF2F0);color:var(--ink,#123F37);border:1px solid var(--ink,#123F37);padding:16px 18px 18px;font:400 16px/1.5 var(--serif,Georgia,serif);box-shadow:0 8px 24px rgba(18,63,55,.12)}
-.cc[hidden]{display:none}
-.cc b{display:block;font:400 14px/1.5 var(--mono,ui-monospace,monospace);margin-bottom:6px}
-.cc p{color:var(--ink-2,#2F5149)}
-.cc a{text-decoration:underline;text-underline-offset:3px}
-.cc-b{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-.cc-b button{font:400 14px/1 var(--mono,ui-monospace,monospace);padding:11px 16px;border:1px solid var(--ink,#123F37);background:transparent;color:inherit;cursor:pointer}
-.cc-b .cc-y{background:var(--ink,#123F37);color:var(--paper,#EEF2F0)}
-.cc-b button:focus-visible{outline:2px solid var(--red,#C42A3C);outline-offset:2px}
 .foot-l button.cc-open{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 </style><!--/cc:css-->
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -688,20 +662,8 @@ const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting
 els.forEach(e => io.observe(e));
 })();</script>
 <!--cc:body-->
-<div class="cc" id="cc" role="dialog" aria-live="polite" aria-label="Preferenze cookie" hidden>
-  <b>Cookie</b>
-  <p>Uso Cloudflare per contare le visite senza cookie. Con il tuo consenso attivo anche Google Analytics, che usa cookie per capire quali pagine e progetti interessano di più. <a href="/privacy/">Privacy</a></p>
-  <div class="cc-b"><button type="button" class="cc-y">Accetta</button><button type="button" class="cc-n">Rifiuta</button></div>
-</div>
 <script>
 (function () {
-  var k = 'cc-v1', box = document.getElementById('cc'), c = null;
-  try { c = localStorage.getItem(k); } catch (e) {}
-  function save(v) { try { localStorage.setItem(k, v); } catch (e) {} box.hidden = true; }
-  if (c !== 'y' && c !== 'n') box.hidden = false;
-  box.querySelector('.cc-y').onclick = function () { save('y'); window.ccLoad(); ev('cookie_choice', {choice: 'accept'}); };
-  box.querySelector('.cc-n').onclick = function () { save('n'); };
-  document.querySelectorAll('.cc-open').forEach(function (b) { b.onclick = function () { box.hidden = false; box.querySelector('button').focus(); }; });
 
   // events: gtag only queues them; nothing leaves the page without consent
   function ev(n, p) { if (window.ccLoaded) gtag('event', n, p || {}); }

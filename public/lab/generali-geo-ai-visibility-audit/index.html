@@ -3,30 +3,7 @@
 <head>
 <meta charset="utf-8">
 <!--cc:head-->
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied'});
-(function () {
-  var k = 'cc-v1', c = null, r = '';
-  try { c = localStorage.getItem(k); } catch (e) {}
-  try { r = (new URLSearchParams(location.search).get('r') || sessionStorage.getItem('lab-r') || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 32); if (r) sessionStorage.setItem('lab-r', r); } catch (e) {}
-  window.labRecipient = r || 'none';
-  window.ccLoad = function () {
-    if (window.ccLoaded) return; window.ccLoaded = true;
-    gtag('consent', 'update', {analytics_storage:'granted'});
-    var s = document.createElement('script'); s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2NLG8LPMZB';
-    document.head.appendChild(s);
-    gtag('js', new Date()); gtag('config', 'G-2NLG8LPMZB', {recipient: window.labRecipient, page_lang: document.documentElement.lang});
-    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "zd1gnxfakc");
-    clarity('consentv2', {ad_Storage: 'denied', analytics_Storage: 'granted'});
-    clarity('set', 'recipient', window.labRecipient);
-    clarity('set', 'page_lang', document.documentElement.lang);
-  };
-  if (c === 'y') window.ccLoad();
-})();
-</script>
+<script src="/assets/consent.js?v=1.0.0" data-ga="G-2NLG8LPMZB" data-policy="/privacy/" data-legacy="cc-v1" data-accent="#123F37"></script>
 <!--/cc:head-->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
@@ -273,15 +250,6 @@ details[open].box summary::before{content:"− "}
 .js .rv.in{opacity:1;transform:none}
 .js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.bar i{transition:none}html{scroll-behavior:auto}}
-.cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:520px;margin-left:auto;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:20px;padding:16px 18px 18px;box-shadow:0 12px 32px rgba(31,26,28,.16);font-size:.92rem}
-.cc[hidden]{display:none}
-.cc b{display:block;font-family:var(--display);font-size:1.05rem;margin-bottom:4px}
-.cc p{color:var(--ink-2);margin:0}
-.cc a{color:inherit;text-decoration:underline;text-underline-offset:3px}
-.cc-b{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-.cc-b button{font:600 .9rem var(--body);padding:10px 18px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:inherit;cursor:pointer}
-.cc-b .cc-y{background:var(--red);border-color:var(--red);color:#fff}
-.cc-b button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 footer button.cc-open{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -575,20 +543,8 @@ footer button.cc-open{font:inherit;color:inherit;background:none;border:0;paddin
 })();
 </script>
 <!--cc:body-->
-<div class="cc" id="cc" role="dialog" aria-live="polite" aria-label="Cookie preferences" hidden>
-  <b>Cookies</b>
-  <p>Cloudflare counts visits without cookies. With your consent I also turn on Google Analytics and Microsoft Clarity, which use cookies to see which sections get read and clicked. <a href="/en/privacy/">Privacy</a></p>
-  <div class="cc-b"><button type="button" class="cc-y">Accept</button><button type="button" class="cc-n">Decline</button></div>
-</div>
 <script>
 (function () {
-  var k = 'cc-v1', box = document.getElementById('cc'), c = null;
-  try { c = localStorage.getItem(k); } catch (e) {}
-  function save(v) { try { localStorage.setItem(k, v); } catch (e) {} box.hidden = true; }
-  if (c !== 'y' && c !== 'n') box.hidden = false;
-  box.querySelector('.cc-y').onclick = function () { save('y'); window.ccLoad(); ev('cookie_choice', {choice: 'accept'}); };
-  box.querySelector('.cc-n').onclick = function () { save('n'); };
-  document.querySelectorAll('.cc-open').forEach(function (b) { b.onclick = function () { box.hidden = false; box.querySelector('button').focus(); }; });
 
   // events: sent only after consent; each carries the recipient tag from ?r=
   function ev(n, p) {
