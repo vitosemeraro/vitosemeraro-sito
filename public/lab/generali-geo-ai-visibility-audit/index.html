@@ -11,6 +11,7 @@ gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_perso
   var k = 'cc-v1', c = null, r = '';
   try { c = localStorage.getItem(k); } catch (e) {}
   try { r = (new URLSearchParams(location.search).get('r') || sessionStorage.getItem('lab-r') || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 32); if (r) sessionStorage.setItem('lab-r', r); } catch (e) {}
+  try { if (r === 'vito') localStorage.setItem('lab-me', '1'); if (localStorage.getItem('lab-me') === '1') r = 'vito'; } catch (e) {}
   window.labRecipient = r || 'none';
   window.ccLoad = function () {
     if (window.ccLoaded) return; window.ccLoaded = true;
